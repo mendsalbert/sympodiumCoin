@@ -14,9 +14,11 @@ const IndexPage = () => {
   } else {
     return (
       <Layout title="Home | Next.js + TypeScript Example">
-        <div className="flex flex-row justify-between items-start mt-20">
-          <div className="flex flex-col space-y-4 text-white ">
-            <p className="font-bold text-6xl ">WC3</p>
+        <div className="flex flex-row justify-between items-start mt-20 w-full">
+          <div className="flex flex-col space-y-5 text-white ">
+            <p className="font-extrabold text-transparent text-7xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              Sympodium
+            </p>
             <p className="text-xl">
               WeCoin 3. World Frist Community Based Cryptocurrency.
             </p>
