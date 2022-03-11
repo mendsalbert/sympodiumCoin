@@ -5,7 +5,7 @@ import LoadingPage from "./loadingPage";
 import Homepage from "./Homepage";
 
 const IndexPage = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   setTimeout(() => {
     setIsLoading(false);
   }, 3000);
