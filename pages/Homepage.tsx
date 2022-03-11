@@ -67,7 +67,6 @@ const Homepage = (props: Props) => {
           <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
             <div className="text-center  mb-7 justify-between ">
               <p className="uppercase text-7xl font-bold py-4">
-                {" "}
                 <CountUp delay={2} end={150} />+
               </p>
             </div>
@@ -79,7 +78,6 @@ const Homepage = (props: Props) => {
           <div className="text-center text-white font-bold p-6 flex flex-col justify-between  relative  bg-gradient-to-r from-[#0a7abfaf] to-[#acff26af] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
             <div className="text-center  mb-7 justify-between ">
               <p className="uppercase text-7xl font-bold py-4">
-                {" "}
                 <CountUp delay={2} end={120} />+
               </p>
             </div>
