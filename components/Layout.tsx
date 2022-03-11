@@ -1,6 +1,8 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
+import { MenuAlt2Icon } from "@heroicons/react/solid";
+import { Menu } from "react-ionicons";
 type Props = {
   children?: ReactNode;
   title?: string;
@@ -43,6 +45,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
               <p>Wallet</p>
               <p>NFT</p>
             </div> */}
+            <MenuAlt2Icon className="h-7 text-white" />
           </div>
           <div className="flex flex-row items-center space-x-4">
             <p className="text-white">Login</p>
