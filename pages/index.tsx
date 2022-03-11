@@ -44,7 +44,11 @@ const IndexPage = () => {
             src="/images/circle1.png"
             className="w-64 absolute top-0 left-60 -z-0"
           />
-          <div className="flex flex-row justify-between space-x-20 my-32">
+          <img
+            src="/images/circle2.png"
+            className="w-64 absolute top-12 ml-32 left-96 -z-0"
+          />
+          <div className="flex flex-row  justify-between space-x-20 my-32">
             <div className=" text-white font-bold p-6 flex flex-col justify-between  relative  bg-gradient-to-r from-[#ffffff8c] to-[#fff7007a] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
               <div className="flex flex-row items-center mb-14 justify-between ">
                 <img src="/images/cardlogo.png" className="w-16" />
@@ -56,7 +60,7 @@ const IndexPage = () => {
               </div>
             </div>
 
-            <div className="  text-white font-bold p-6 flex flex-col justify-between  relative  bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
+            <div className=" flex-grow text-white font-bold p-6 flex flex-col justify-between  relative  bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
               <div className="flex flex-row items-center mb-14 justify-between ">
                 <img src="/images/cardlogo.png" className="w-16" />
                 <p className="uppercase text-lg">Sympodium</p>

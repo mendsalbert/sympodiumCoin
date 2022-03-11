@@ -15,6 +15,7 @@ module.exports = {
         "image-avtr": "url('/images/avtr.png')",
         "card-logo": "url('/images/cardlogo.png')",
         "circle-one": "url('/images/circle1.png')",
+        "circle-two": "url('/images/circle2.png')",
       },
     },
   },
