@@ -14,7 +14,7 @@ const IndexPage = () => {
     return <LoadingPage />;
   } else {
     return (
-      <Layout title="Home | Next.js + TypeScript Example">
+      <Layout title="sympodium coin">
         <Homepage />
       </Layout>
     );
