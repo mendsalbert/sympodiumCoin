@@ -14,7 +14,7 @@ const Homepage = (props: Props) => {
   return (
     <div>
       <div className="flex flex-col space-y-10 lg:space-y-0 lg:flex lg:flex-row justify-between space-x-0 lg:space-x-16 items-start my-20 w-full">
-        <div className="flex flex-col lg:space-y-5 space-y-5 text-white  ">
+        <div className="flex flex-col lg:space-y-5 space-y-3 text-white  ">
           <p className="font-extrabold text-transparent  text-[2.5rem] md:text-5xl w-full lg:text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
             Sympodium
           </p>
