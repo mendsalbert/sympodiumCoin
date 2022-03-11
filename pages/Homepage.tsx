@@ -42,7 +42,7 @@ const Homepage = (props: Props) => {
           <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative  bg-gradient-to-r from-[#ffffff8c] to-[#fff7007a] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl   backdrop-filter: blur(20px)">
             <div className="text-center  mb-7 justify-between ">
               <p className="uppercase text-7xl font-bold py-4 ">
-                <CountUp delay={2} end={100} />
+                <CountUp delay={2} end={300} />
               </p>
             </div>
             <div className="space-y-0">
@@ -52,7 +52,10 @@ const Homepage = (props: Props) => {
 
           <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
             <div className="text-center  mb-7 justify-between ">
-              <p className="uppercase text-7xl font-bold py-4">5k+</p>
+              <p className="uppercase text-7xl font-bold py-4">
+                {" "}
+                <CountUp delay={2} end={150} />
+              </p>
             </div>
             <div className="space-y-0">
               <p className="text-xl">TRANSACTIONS MADE</p>
@@ -61,7 +64,10 @@ const Homepage = (props: Props) => {
 
           <div className="text-center text-white font-bold p-6 flex flex-col justify-between  relative  bg-gradient-to-r from-[#0a7abfaf] to-[#acff26af] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
             <div className="text-center  mb-7 justify-between ">
-              <p className="uppercase text-7xl font-bold py-4">1k+</p>
+              <p className="uppercase text-7xl font-bold py-4">
+                {" "}
+                <CountUp delay={2} end={120} />
+              </p>
             </div>
             <div className="space-y-0">
               <p className="text-xl">TRANSACTIONS MADE</p>
