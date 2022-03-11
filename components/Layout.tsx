@@ -22,7 +22,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       />
     </Head>
     <header>
-      <nav className="flex flex-row items-center  justify-between mt-16">
+      <nav className="flex flex-row items-center  justify-between pt-16">
         <div className="flex flex-row items-center space-x-4">
           <img src="/images/logo.png" className="w-14" />
           <div className="flex flex-row items-center space-x-5">
@@ -34,7 +34,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
         <div className="flex flex-row items-center space-x-4">
           <p>Login</p>
           <div> Sign Up</div>
-          <img src="/images/logo.png" />
+          <img src="/images/logo.png " className="w-14" />
         </div>
       </nav>
     </header>
