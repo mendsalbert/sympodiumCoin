@@ -54,7 +54,7 @@ const Homepage = (props: Props) => {
             <div className="text-center  mb-7 justify-between ">
               <p className="uppercase text-7xl font-bold py-4">
                 {" "}
-                <CountUp delay={2} end={150} />
+                <CountUp delay={2} end={150} />+
               </p>
             </div>
             <div className="space-y-0">
@@ -66,7 +66,7 @@ const Homepage = (props: Props) => {
             <div className="text-center  mb-7 justify-between ">
               <p className="uppercase text-7xl font-bold py-4">
                 {" "}
-                <CountUp delay={2} end={120} />
+                <CountUp delay={2} end={120} />+
               </p>
             </div>
             <div className="space-y-0">
