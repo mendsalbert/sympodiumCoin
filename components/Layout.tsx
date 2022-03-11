@@ -12,7 +12,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
     animate={{ opacity: 1 }}
     transition={{ delay: 0.8 }}
   >
-    <div className="font-Montserrat px-4 md:px-20  lg:px-48 bg-main-background bg-cover overflow-x-hidden  bg-no-repeat  bg-center h-screen">
+    <div className="font-Montserrat px-4  md:px-20  lg:px-48 bg-main-background bg-cover overflow-x-hidden  bg-no-repeat  bg-center h-screen">
       <Head>
         <title>{title}</title>
       </Head>
@@ -35,14 +35,14 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
           </div>
         </nav>
 
-        <nav className="lg:flex flex-row items-center  justify-between pt-6">
+        <nav className="lg:hidden flex-row items-center  justify-between pt-6  ">
           <div className="flex flex-row items-center space-x-4">
-            <img src="/images/logo.png" className="w-14" />
+            {/* <img src="/images/logo.png" className="w-14" />
             <div className="flex flex-row items-center text-white space-x-5">
               <p>Blockchain</p>
               <p>Wallet</p>
               <p>NFT</p>
-            </div>
+            </div> */}
           </div>
           <div className="flex flex-row items-center space-x-4">
             <p className="text-white">Login</p>

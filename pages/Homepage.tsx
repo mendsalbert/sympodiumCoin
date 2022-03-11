@@ -10,14 +10,7 @@ const Homepage = (props: Props) => {
   const onVWEnter = () => {
     setViewPortEntered(true);
   };
-  //   const onScroll = () => {
-  //     if (listInnerRef.current) {
-  //       const { scrollTop, scrollHeight, clientHeight } = listInnerRef.current;
-  //       if (scrollTop + clientHeight === scrollHeight) {
-  //         console.log("reached bottom");
-  //       }
-  //     }
-  //   };
+
   return (
     <div>
       <div className="flex flex-row justify-between space-x-16 items-start my-20 w-full">
