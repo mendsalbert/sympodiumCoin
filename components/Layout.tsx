@@ -27,7 +27,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
 
   return (
     // <Html className="dark">
-    <html class="dark">
+    <html className="dark">
       <motion.header
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
