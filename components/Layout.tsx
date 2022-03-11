@@ -33,12 +33,14 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
 
   const html = htmlRef.current;
   const setTheme = () => {
+    setToggle(!toggle);
+    console.log(toggle);
     if (typeof window === "object") {
-      if (toggle) {
+      if (!toggle) {
         localStorage.setItem("theme", "dark");
-        html.classList.add("dark");
+        // html.classList.add("dark");
       } else {
-        html.classList.remove("dark");
+        // html.classList.remove("dark");
         localStorage.setItem("theme", "light");
       }
     }
@@ -48,7 +50,8 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
     if (typeof window === "object") {
       let theme = localStorage.getItem("theme");
       if (theme === "dark") {
-        setTheme();
+        setToggle(true);
+        // setTheme();
       } else {
       }
     }
@@ -86,27 +89,24 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                   onClick={() => {
                     console.log("something");
                     setTheme();
-                    toggle
-                      ? html.classList.add("dark")
-                      : html.classList.remove("dark");
                   }}
                 >
                   {!toggle ? (
                     <MoonIcon
-                      onClick={() => {
-                        toggleMode();
-                        setTheme();
-                        html.classList.remove("dark");
-                      }}
+                      // onClick={() => {
+                      //   // toggleMode();
+                      //   setTheme();
+
+                      // }}
                       className="h-10 text-white cursor-pointer"
                     />
                   ) : (
                     <SunIcon
-                      onClick={() => {
-                        toggleMode();
-                        setTheme();
-                        html.classList.add("dark");
-                      }}
+                      // onClick={() => {
+                      //   // // toggleMode();
+                      //   // setTheme();
+
+                      // }}
                       className="h-10 text-white cursor-pointer"
                     />
                   )}
