@@ -14,6 +14,7 @@ module.exports = {
         "main-logo": "url('/images/logo.png')",
         "image-avtr": "url('/images/avtr.png')",
         "card-logo": "url('/images/cardlogo.png')",
+        "circle-one": "url('/images/circle1.png')",
       },
     },
   },
