@@ -14,7 +14,7 @@ const IndexPage = () => {
   } else {
     return (
       <Layout title="Home | Next.js + TypeScript Example">
-        <div className="flex flex-row justify-between items-start my-20 w-full">
+        <div className="flex flex-row justify-between space-x-16 items-start my-20 w-full">
           <div className="flex flex-col space-y-5 text-white  ">
             <p className="font-extrabold text-transparent text-7xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               {/* <p className="font-extrabold  text-7xl bg-clip-text text-white"> */}
@@ -69,13 +69,23 @@ const IndexPage = () => {
 
             <div className="text-center text-white font-bold p-6 flex flex-col justify-between  relative  bg-gradient-to-r from-[#0a7abfaf] to-[#acff26af] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
               <div className="text-center  mb-7 justify-between ">
-                <p className="uppercase text-7xl font-bold py-4">1 k+</p>
+                <p className="uppercase text-7xl font-bold py-4">1k+</p>
               </div>
               <div className="space-y-0">
                 <p className="text-xl">TRANSACTIONS MADE</p>
               </div>
             </div>
           </div>
+        </div>
+        <div className="my-20 flex flex-col items-center">
+          <div className="uppercase  rounded-full text-center py-2 px-5 text-white text-lg w-4/12 cursor-default bg-gradient-to-r from-pink-500 to-yellow-500 ">
+            About us
+          </div>
+
+          <p className="text-center py-5 text-white text-xl">
+            WeCoin 3. World Frist Community Based Cryptocurrency. WeCoin 3.
+            World Frist Community Based Cryptocurrency.
+          </p>
         </div>
       </Layout>
     );
