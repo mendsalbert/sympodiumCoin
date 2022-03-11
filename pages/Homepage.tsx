@@ -15,7 +15,7 @@ const Homepage = (props: Props) => {
     <div>
       <div className="flex flex-col space-y-10 lg:space-y-0 lg:flex lg:flex-row justify-between space-x-0 lg:space-x-16 items-start my-20 w-full">
         <div className="flex flex-col lg:space-y-5 space-y-5 text-white  ">
-          <p className="font-extrabold text-transparent  text-[2.5rem] w-full lg:text-7xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+          <p className="font-extrabold text-transparent  text-[2.5rem] md:text-5xl w-full lg:text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
             Sympodium
           </p>
           <p className="text-xl">
@@ -49,10 +49,10 @@ const Homepage = (props: Props) => {
           className="w-64 absolute top-12 ml-32 left-96 -z-0"
         />
 
-        <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-24 gap-12 lg:my-32 my-24 ">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-24 gap-12 lg:my-32 my-24 ">
           <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative  bg-gradient-to-r from-[#ffffff8c] to-[#fff7007a] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl   backdrop-filter: blur(20px)">
             <div className="text-center  mb-7 justify-between ">
-              <p className="uppercase text-7xl font-bold py-4 ">
+              <p className="uppercase text-5xl font-bold py-4 ">
                 {viewPortEntered ? (
                   <CountUp delay={1} end={300} />
                 ) : (
@@ -68,7 +68,7 @@ const Homepage = (props: Props) => {
 
           <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
             <div className="text-center  mb-7 justify-between ">
-              <p className="uppercase text-7xl font-bold py-4">
+              <p className="uppercase text-5xl font-bold py-4">
                 {viewPortEntered ? (
                   <CountUp delay={1} end={150} />
                 ) : (
@@ -84,7 +84,7 @@ const Homepage = (props: Props) => {
 
           <div className="text-center text-white font-bold p-6 flex flex-col justify-between  relative  bg-gradient-to-r from-[#0a7abfaf] to-[#acff26af] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
             <div className="text-center  mb-7 justify-between ">
-              <p className="uppercase text-7xl font-bold py-4">
+              <p className="uppercase text-5xl font-bold py-4">
                 {viewPortEntered ? (
                   <CountUp delay={1} end={120} />
                 ) : (
