@@ -62,9 +62,9 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                   <XIcon className="text-white h-9 absolute top-0 right-0 m-2 mb-10" />
 
                   <div>
-                    <div className="pt-10 my-3">
+                    <div className="pt-10 my-3 space-y-5">
                       {/* <p className="text-white">Login</p> */}
-                      <div className="bg-[#5F6FFB] py-2 px-4 text-white rounded-md text-center">
+                      <div className=" py-2 px-4 text-white border-2 border-white rounded-md text-center">
                         Log In
                       </div>
                       <div className="bg-blue-800 py-2 px-4 text-white rounded-md text-center">
