@@ -59,7 +59,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
             <nav className=" relative lg:hidden flex flex-row items-center  justify-between pt-6  ">
               <div
                 ref={toggleRef}
-                className="w-0 transition-width duration-200 delay-75 ease-in-out bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE]  lg:hidden overflow-auto h-full fixed shadow-2xl top-0 left-0 z-50"
+                className="w-0 transition-width duration-200 delay-75 ease-in-out bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] dark:bg-gradient-to-r dark:from-[#021622] dark:to-[#011627]  lg:hidden overflow-auto h-full fixed shadow-2xl top-0 left-0 z-50"
               >
                 <div className="flex flex-col p-6 relative">
                   <div>
