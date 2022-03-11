@@ -22,7 +22,7 @@ const IndexPage = () => {
             <p className="text-xl">
               WeCoin 3. World Frist Community Based Cryptocurrency.
             </p>
-            <div className="rounded-full text-center py-2 px-5 text-lg w-6/12 bg-[#5F6FFB]">
+            <div className="rounded-full text-center py-2 px-5 text-lg w-6/12 cursor-default bg-gradient-to-r from-pink-500 to-yellow-500 ">
               Get Started
             </div>
           </div>
@@ -33,7 +33,7 @@ const IndexPage = () => {
               <p className="uppercase text-lg">Sympodium</p>
             </div>
             <div className="space-y-4">
-              <p>0aB3 xxxx xxxx xxxx</p>
+              <p className="text-xl ">0aB3 XXXX XXXX XXXX XXXX</p>
               <p className="text-xl">SYMPODIUM COIN</p>
             </div>
           </div>
