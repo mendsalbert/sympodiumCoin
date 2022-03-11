@@ -73,8 +73,8 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                     </div>
                   </div>
 
-                  <div className="space-x-3">
-                    <div className="flex flex-row items-center">
+                  <div className="my-12">
+                    <div className="flex flex-row items-center space-x-3">
                       <CubeIcon className="h-9 text-white" />
 
                       <p className="text-white">Blockchians</p>
