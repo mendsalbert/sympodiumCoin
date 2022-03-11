@@ -10,7 +10,7 @@ module.exports = {
         LeagueGothis: "'League Gothic', sans-serif",
       },
       backgroundImage: {
-        "main-background": "url('/images/mainBackground.png')",
+        "main-background": "url('/images/mainBackground.jpg')",
         "main-logo": "url('/images/logo.png')",
         "image-avtr": "url('/images/avtr.png')",
         "card-logo": "url('/images/cardlogo.png')",
