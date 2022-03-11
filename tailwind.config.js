@@ -21,6 +21,7 @@ module.exports = {
         "twitter-logo": "url('/images/twitter.png')",
         "discord-logo": "url('/images/discord.png')",
         "linkedln-logo": "url('/images/linkedln.png')",
+        cube: "url('/images/cube.png')",
       },
     },
   },

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import LoadingPage from "./loadingPage";
 import Homepage from "./Homepage";
+import Blocks from "./blocks";
 
 const IndexPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -15,7 +16,8 @@ const IndexPage = () => {
   } else {
     return (
       <Layout title="sympodium coin">
-        <Homepage />
+        {/* <Homepage /> */}
+        <Blocks />
       </Layout>
     );
   }
