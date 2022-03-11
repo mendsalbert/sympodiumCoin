@@ -40,7 +40,15 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       </nav>
     </header>
     {children}
-    <footer className="py-4 flex-col items-center text-center"></footer>
+    <footer className="py-4 flex-col items-center space-y-4 text-center">
+      <div className="flex flex-row space-x-4 justify-center items-center cursor-pointer">
+        <img src="/images/twitter.png" className="w-16" />
+        <img src="/images/discord.png" className="w-16" />
+
+        <img src="/images/linkedln.png" className="w-16" />
+      </div>
+      <p className="text-white text-lg">@Sympodium Coin 2022</p>
+    </footer>
   </div>
 );
 
