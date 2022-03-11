@@ -1,7 +1,8 @@
 import React, { ReactNode, useRef } from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
-import { CubeIcon, MenuAlt2Icon, XIcon } from "@heroicons/react/solid";
+import { MenuAlt2Icon, XIcon } from "@heroicons/react/solid";
+import { CubeIcon } from "@heroicons/react/outline";
 import { Menu } from "react-ionicons";
 type Props = {
   children?: ReactNode;
