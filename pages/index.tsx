@@ -7,7 +7,7 @@ const IndexPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   setTimeout(() => {
     setIsLoading(false);
-  }, 500);
+  }, 5000);
 
   if (isLoading) {
     return <LoadingPage />;
