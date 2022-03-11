@@ -15,8 +15,8 @@ const IndexPage = () => {
     return (
       <Layout title="Home | Next.js + TypeScript Example">
         <div className="flex flex-row justify-between items-start mt-20 w-full">
-          <div className="flex flex-col space-y-5 text-white ">
-            <p className="font-extrabold text-transparent text-7xl bg-clip-text bg-gradient-to-r from-cyan-500 to-pink-400">
+          <div className="flex flex-col space-y-5 text-white  ">
+            <p className="font-extrabold text-transparent text-7xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Sympodium
             </p>
             <p className="text-xl">
@@ -27,12 +27,7 @@ const IndexPage = () => {
             </div>
           </div>
 
-          <div
-            className="w-40 h-32 background: linear-gradient(111.49deg, rgba(255, 255, 255, 0.4) -8.95%, rgba(255, 255, 255, 0.01) 114%) 
-backdrop-filter: blur(100px)
-border-radius: 25px"
-          ></div>
-          <div className="grad"></div>
+          <div className=" w-7/12 h-44 relative px-4 py-10 bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)"></div>
         </div>
       </Layout>
     );
