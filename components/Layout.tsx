@@ -8,7 +8,7 @@ type Props = {
 };
 
 const Layout = ({ children, title = "This is the default title" }: Props) => (
-  <div className="font-Montserrat px-40 bg-main-background bg-cover bg-center h-screen">
+  <div className="font-Montserrat px-40 bg-main-background bg-cover  bg-no-repeat  bg-center h-screen">
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
@@ -22,7 +22,16 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       />
     </Head>
     <header>
-      <nav></nav>
+      <nav className="flex flex-row items-center space-x-3 justify-between">
+        <div>
+          <img src="/images/logo.png" className="w-14" />
+          <div className="flex flex-row items-center space-x-5">
+            <p>Blockchain</p>
+            <p>Wallet</p>
+            <p>NFT</p>
+          </div>
+        </div>
+      </nav>
     </header>
     {children}
     {/* <footer>
