@@ -25,8 +25,8 @@ const Homepage = (props: Props) => {
             Get Started
           </div>
         </div>
-        <div className="animate-pulse text-white font-bold p-6 flex flex-col justify-between w-7/12 relative  bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
-          <div className="flex flex-row items-center mb-14 justify-between ">
+        <div className="animate-pulse text-white font-bold p-6 flex flex-col justify-between w-full lg:w-7/12 relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
+          <div className="flex flex-row items-center mb-5 lg:mb-14 justify-between ">
             <img src="/images/cardlogo.png" className="w-16" />
             <p className="uppercase text-lg">Sympodium</p>
           </div>
