@@ -1,7 +1,7 @@
 import React, { ReactNode, useRef } from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
-import { MenuAlt2Icon, XIcon } from "@heroicons/react/solid";
+import { CubeIcon, MenuAlt2Icon, XIcon } from "@heroicons/react/solid";
 import { Menu } from "react-ionicons";
 type Props = {
   children?: ReactNode;
@@ -70,6 +70,14 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                       <div className="bg-blue-800 py-2 px-4 text-white rounded-md text-center">
                         Sign Up
                       </div>
+                    </div>
+                  </div>
+
+                  <div className="space-x-3">
+                    <div className="flex flex-row items-center">
+                      <CubeIcon className="h-9 text-white" />
+
+                      <p className="text-white">Blockchians</p>
                     </div>
                   </div>
                 </div>
