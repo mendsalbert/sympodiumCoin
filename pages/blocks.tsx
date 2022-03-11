@@ -5,7 +5,7 @@ type Props = {};
 const Blocks = (props: Props) => {
   return (
     <div>
-      <div className="flex flex-row items-center justify-center">
+      <div className="flex flex-row items-center justify-center space-x-4">
         <p className="font-extrabold  text-center text-white text-5xl  lg:text-6xl ">
           Blocks
         </p>
