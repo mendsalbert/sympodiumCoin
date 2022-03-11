@@ -8,7 +8,7 @@ type Props = {
 };
 
 const Layout = ({ children, title = "This is the default title" }: Props) => (
-  <div className="font-Montserrat mx-18">
+  <div className="font-Montserrat px-40 bg-main-background bg-cover bg-center h-screen">
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
@@ -22,26 +22,13 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       />
     </Head>
     <header>
-      <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>{" "}
-        |{" "}
-        <Link href="/about">
-          <a>About</a>
-        </Link>{" "}
-        |{" "}
-        <Link href="/users">
-          <a>Users List</a>
-        </Link>{" "}
-        | <a href="/api/users">Users API</a>
-      </nav>
+      <nav></nav>
     </header>
     {children}
-    <footer>
+    {/* <footer>
       <hr />
       <span>I'm here to stay (Footer)</span>
-    </footer>
+    </footer> */}
   </div>
 );
 
