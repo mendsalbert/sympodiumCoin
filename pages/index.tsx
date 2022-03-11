@@ -27,7 +27,16 @@ const IndexPage = () => {
             </div>
           </div>
 
-          <div className=" w-7/12 h-44 relative px-4 py-10 bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)"></div>
+          <div className=" text-white font-bold p-6 flex flex-col justify-between w-7/12 relative  bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
+            <div className="flex flex-row items-center mb-14 justify-between ">
+              <img src="/images/logo.png" className="w-16" />
+              <p className="uppercase text-lg">Sympodium</p>
+            </div>
+            <div className="space-y-4">
+              <p>0aB3 xxxx xxxx xxxx</p>
+              <p className="text-xl">SYMPODIUM COIN</p>
+            </div>
+          </div>
         </div>
       </Layout>
     );

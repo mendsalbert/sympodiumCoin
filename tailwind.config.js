@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Montserrat: "'Montserrat', sans-serif",
+        LeagueGothis: "'League Gothic', sans-serif",
       },
       backgroundImage: {
         "main-background": "url('/images/mainBackground.png')",
