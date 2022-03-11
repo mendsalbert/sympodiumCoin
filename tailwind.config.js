@@ -12,6 +12,7 @@ module.exports = {
       },
       backgroundImage: {
         "main-background": "url('/images/mainBackground.jpg')",
+        "main-background-dark": "url('/images/mainBackgroundDark.jpg')",
         "main-logo": "url('/images/logo.png')",
         "image-avtr": "url('/images/avtr.png')",
         "card-logo": "url('/images/cardlogo.png')",
