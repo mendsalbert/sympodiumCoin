@@ -25,16 +25,18 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       <nav className="flex flex-row items-center  justify-between pt-16">
         <div className="flex flex-row items-center space-x-4">
           <img src="/images/logo.png" className="w-14" />
-          <div className="flex flex-row items-center space-x-5">
+          <div className="flex flex-row items-center text-white space-x-5">
             <p>Blockchain</p>
             <p>Wallet</p>
             <p>NFT</p>
           </div>
         </div>
         <div className="flex flex-row items-center space-x-4">
-          <p>Login</p>
-          <div> Sign Up</div>
-          <img src="/images/logo.png " className="w-14" />
+          <p className="text-white">Login</p>
+          <div className="bg-[#5F6FFB] py-2 px-4 text-white rounded-md text-center">
+            Sign Up
+          </div>
+          <img src="/images/avtr.png " className="w-14" />
         </div>
       </nav>
     </header>
