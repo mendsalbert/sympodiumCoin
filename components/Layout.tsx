@@ -1,8 +1,8 @@
-import React, { ReactNode, useRef } from "react";
+import React, { ReactNode, useRef, useState } from "react";
 import Head from "next/head";
 import { Html } from "next/document";
 import { motion } from "framer-motion";
-import { MenuAlt2Icon, XIcon } from "@heroicons/react/solid";
+import { MenuAlt2Icon, MoonIcon, XIcon } from "@heroicons/react/solid";
 import {
   CubeIcon,
   CreditCardIcon,
@@ -16,6 +16,7 @@ type Props = {
 
 const Layout = ({ children, title = "This is the default title" }: Props) => {
   const toggleRef = useRef(null);
+  const [toggle, setToggle] = useState(false);
 
   const openMenu = () => {
     toggleRef.current.style.width = "90%";
@@ -25,6 +26,9 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
     toggleRef.current.style.width = "0%";
   };
 
+  const toggleMode = () => {
+    setToggle(!toggle);
+  };
   return (
     // <Html className="dark">
     <html className="dark">
@@ -113,7 +117,13 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                   className="h-12 cursor-pointer text-white"
                 />
               </div>
-              <div className="flex flex-row items-center space-x-4">
+              <div className="flex flex-row items-center space-x-0">
+                <MoonIcon
+                  onClick={() => {
+                    toggleMode();
+                  }}
+                  className="h-10 text-white cursor-pointer"
+                />
                 <img src="/images/avtr.png " className="w-14" />
               </div>
             </nav>
