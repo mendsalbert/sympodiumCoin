@@ -60,6 +60,18 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                   }}
                 >
                   <XIcon className="text-white h-9 absolute top-0 right-0 m-2 mb-10" />
+
+                  <div>
+                    <div className="pt-10 my-3">
+                      {/* <p className="text-white">Login</p> */}
+                      <div className="bg-[#5F6FFB] py-2 px-4 text-white rounded-md text-center">
+                        Log In
+                      </div>
+                      <div className="bg-blue-800 py-2 px-4 text-white rounded-md text-center">
+                        Sign Up
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -72,10 +84,6 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
               />
             </div>
             <div className="flex flex-row items-center space-x-4">
-              {/* <p className="text-white">Login</p>
-              <div className="bg-[#5F6FFB] py-2 px-4 text-white rounded-md text-center">
-                Sign Up
-              </div> */}
               <img src="/images/avtr.png " className="w-14" />
             </div>
           </nav>
