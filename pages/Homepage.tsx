@@ -1,18 +1,23 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import CountUp from "react-countup";
+import { Waypoint } from "react-waypoint";
+
 type Props = {};
 
 const Homepage = (props: Props) => {
   const listInnerRef = useRef();
-
-  const onScroll = () => {
-    if (listInnerRef.current) {
-      const { scrollTop, scrollHeight, clientHeight } = listInnerRef.current;
-      if (scrollTop + clientHeight === scrollHeight) {
-        console.log("reached bottom");
-      }
-    }
+  const [viewPortEntered, setViewPortEntered] = useState(false);
+  const onVWEnter = () => {
+    setViewPortEntered(true);
   };
+  //   const onScroll = () => {
+  //     if (listInnerRef.current) {
+  //       const { scrollTop, scrollHeight, clientHeight } = listInnerRef.current;
+  //       if (scrollTop + clientHeight === scrollHeight) {
+  //         console.log("reached bottom");
+  //       }
+  //     }
+  //   };
   return (
     <div>
       <div className="flex flex-row justify-between space-x-16 items-start my-20 w-full">
@@ -48,15 +53,17 @@ const Homepage = (props: Props) => {
           src="/images/circle2.png"
           className="w-64 absolute top-12 ml-32 left-96 -z-0"
         />
-        <div
-          className="grid grid-cols-3 gap-24 my-32"
-          onScroll={onScroll}
-          ref={listInnerRef}
-        >
+
+        <div className="grid grid-cols-3 gap-24 my-32">
           <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative  bg-gradient-to-r from-[#ffffff8c] to-[#fff7007a] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl   backdrop-filter: blur(20px)">
             <div className="text-center  mb-7 justify-between ">
               <p className="uppercase text-7xl font-bold py-4 ">
-                <CountUp delay={2} end={300} />+
+                {viewPortEntered ? (
+                  <CountUp delay={1} end={300} />
+                ) : (
+                  <CountUp delay={1} end={0} />
+                )}
+                +
               </p>
             </div>
             <div className="space-y-0">
@@ -67,7 +74,12 @@ const Homepage = (props: Props) => {
           <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
             <div className="text-center  mb-7 justify-between ">
               <p className="uppercase text-7xl font-bold py-4">
-                <CountUp delay={2} end={150} />+
+                {viewPortEntered ? (
+                  <CountUp delay={1} end={150} />
+                ) : (
+                  <CountUp delay={1} end={0} />
+                )}
+                +
               </p>
             </div>
             <div className="space-y-0">
@@ -78,15 +90,26 @@ const Homepage = (props: Props) => {
           <div className="text-center text-white font-bold p-6 flex flex-col justify-between  relative  bg-gradient-to-r from-[#0a7abfaf] to-[#acff26af] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
             <div className="text-center  mb-7 justify-between ">
               <p className="uppercase text-7xl font-bold py-4">
-                <CountUp delay={2} end={120} />+
+                {viewPortEntered ? (
+                  <CountUp delay={1} end={120} />
+                ) : (
+                  <CountUp delay={1} end={0} />
+                )}
+                +
               </p>
             </div>
             <div className="space-y-0">
               <p className="text-xl">WALLETS</p>
             </div>
           </div>
+          <Waypoint onEnter={onVWEnter}>
+            <div></div>
+          </Waypoint>
         </div>
+
+        {/*  */}
       </div>
+
       <div className="my-20 flex flex-col items-center">
         <div className="uppercase  rounded-full text-center py-2 px-5 text-white text-lg w-4/12 cursor-default bg-gradient-to-r from-pink-500 to-yellow-500 ">
           About us
