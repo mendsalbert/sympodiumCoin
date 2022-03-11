@@ -5,10 +5,10 @@ import LoadingPage from "./loadingPage";
 import Homepage from "./Homepage";
 
 const IndexPage = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   setTimeout(() => {
     setIsLoading(false);
-  }, 5000);
+  }, 3000);
 
   if (isLoading) {
     return <LoadingPage />;
