@@ -28,10 +28,12 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
 
   const toggleMode = () => {
     setToggle(!toggle);
+    console.log(toggle);
   };
   return (
     // <Html className="dark">
-    <html className="dark">
+
+    <html className={toggle ? "dark" : ""}>
       <motion.header
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
