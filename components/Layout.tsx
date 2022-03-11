@@ -33,8 +33,6 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
 
   const html = htmlRef.current;
   const setTheme = () => {
-    setToggle(!toggle);
-    // setChecked((prev) => !prev);
     if (typeof window === "object") {
       if (toggle) {
         localStorage.setItem("theme", "dark");
