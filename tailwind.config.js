@@ -13,6 +13,7 @@ module.exports = {
         "main-background": "url('/images/mainBackground.png')",
         "main-logo": "url('/images/logo.png')",
         "image-avtr": "url('/images/avtr.png')",
+        "card-logo": "url('/images/cardlogo.png')",
       },
     },
   },
