@@ -5,11 +5,11 @@ type Props = {};
 const Blocks = (props: Props) => {
   return (
     <div>
-      <div className="flex flex-row">
-        <p className="font-extrabold  text-center text-white text-5xl w-full lg:text-6xl ">
-          Sympodium
+      <div className="flex flex-row items-center justify-center">
+        <p className="font-extrabold  text-center text-white text-5xl  lg:text-6xl ">
+          Blocks
         </p>
-        <img src="/images/cube.png" className="w-16" />
+        <img src="/images/cube.png" className="w-32" />
       </div>
     </div>
   );
