@@ -9,7 +9,7 @@ const IndexPage = () => {
     setIsLoading(false);
   }, 5000);
 
-  if (isLoading) {
+  if (true) {
     return <LoadingPage />;
   } else {
     return (
