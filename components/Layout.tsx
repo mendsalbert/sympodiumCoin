@@ -1,7 +1,6 @@
 import React, { ReactNode } from "react";
-
 import Head from "next/head";
-import { LogoTwitter, LogoLinkedin, LogoDiscord } from "react-ionicons";
+
 type Props = {
   children?: ReactNode;
   title?: string;
@@ -41,9 +40,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       </nav>
     </header>
     {children}
-    <footer className="py-4 flex-col items-center text-center">
-      <LogoTwitter color={"#00000"} rotate height="250px" width="250px" />
-    </footer>
+    <footer className="py-4 flex-col items-center text-center"></footer>
   </div>
 );
 
