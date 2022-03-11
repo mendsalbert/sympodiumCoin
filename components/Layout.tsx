@@ -20,6 +20,14 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=League+Gothic&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:wght@200;300;400;600;700&family=Secular+One&display=swap"
         rel="stylesheet"
       />
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        noModule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      ></script>
     </Head>
     <header>
       <nav className="flex flex-row items-center  justify-between pt-16">
@@ -41,10 +49,9 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       </nav>
     </header>
     {children}
-    {/* <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer> */}
+    <footer className="py-4 flex-col items-center text-center">
+      <ion-icon name="heart"></ion-icon>
+    </footer>
   </div>
 );
 
