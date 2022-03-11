@@ -107,7 +107,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                 onClick={() => {
                   openMenu();
                 }}
-                className="h-10 cursor-pointer text-white"
+                className="h-12 cursor-pointer text-white"
               />
             </div>
             <div className="flex flex-row items-center space-x-4">
