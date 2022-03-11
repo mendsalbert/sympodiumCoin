@@ -31,16 +31,12 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
     setToggle(!toggle);
   };
 
-  const html = htmlRef.current;
   const setTheme = () => {
     setToggle(!toggle);
-    console.log(toggle);
     if (typeof window === "object") {
       if (!toggle) {
         localStorage.setItem("theme", "dark");
-        // html.classList.add("dark");
       } else {
-        // html.classList.remove("dark");
         localStorage.setItem("theme", "light");
       }
     }
@@ -51,7 +47,6 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
       let theme = localStorage.getItem("theme");
       if (theme === "dark") {
         setToggle(true);
-        // setTheme();
       } else {
       }
     }
@@ -87,28 +82,13 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                 </div>
                 <div
                   onClick={() => {
-                    console.log("something");
                     setTheme();
                   }}
                 >
                   {!toggle ? (
-                    <MoonIcon
-                      // onClick={() => {
-                      //   // toggleMode();
-                      //   setTheme();
-
-                      // }}
-                      className="h-10 text-white cursor-pointer"
-                    />
+                    <MoonIcon className="h-10 text-white cursor-pointer" />
                   ) : (
-                    <SunIcon
-                      // onClick={() => {
-                      //   // // toggleMode();
-                      //   // setTheme();
-
-                      // }}
-                      className="h-10 text-white cursor-pointer"
-                    />
+                    <SunIcon className="h-10 text-white cursor-pointer" />
                   )}
                 </div>
 
@@ -174,22 +154,17 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                 />
               </div>
               <div className="flex flex-row items-center space-x-0">
-                {!toggle ? (
-                  <MoonIcon
-                    onClick={() => {
-                      toggleMode();
-                    }}
-                    className="h-10 text-white cursor-pointer"
-                  />
-                ) : (
-                  <SunIcon
-                    onClick={() => {
-                      toggleMode();
-                    }}
-                    className="h-10 text-white cursor-pointer"
-                  />
-                )}
-
+                <div
+                  onClick={() => {
+                    setTheme();
+                  }}
+                >
+                  {!toggle ? (
+                    <MoonIcon className="h-10 text-white cursor-pointer" />
+                  ) : (
+                    <SunIcon className="h-10 text-white cursor-pointer" />
+                  )}
+                </div>
                 <img src="/images/avtr.png " className="w-14" />
               </div>
             </nav>
