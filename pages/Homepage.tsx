@@ -13,10 +13,9 @@ const Homepage = (props: Props) => {
 
   return (
     <div>
-      <div className="flex flex-row justify-between space-x-16 items-start my-20 w-full">
+      <div className="flex flex-col lg:flex lg:flex-row justify-between space-x-16 items-start my-20 w-full">
         <div className="flex flex-col space-y-5 text-white  ">
-          <p className="font-extrabold text-transparent text-7xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-            {/* <p className="font-extrabold  text-7xl bg-clip-text text-white"> */}
+          <p className="font-extrabold text-transparent  text-5xl lg:text-7xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
             Sympodium
           </p>
           <p className="text-xl">

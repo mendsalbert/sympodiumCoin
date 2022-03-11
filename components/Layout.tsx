@@ -37,15 +37,9 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
           </div>
         </nav>
 
-        <nav className="lg:hidden flex-row items-center  justify-between pt-6  ">
+        <nav className="lg:hidden flex flex-row items-center  justify-between pt-6  ">
           <div className="flex flex-row items-center space-x-4">
-            {/* <img src="/images/logo.png" className="w-14" />
-            <div className="flex flex-row items-center text-white space-x-5">
-              <p>Blockchain</p>
-              <p>Wallet</p>
-              <p>NFT</p>
-            </div> */}
-            <MenuAlt2Icon className="h-7 text-white" />
+            <MenuAlt2Icon className="h-10 cursor-pointer text-white" />
           </div>
           <div className="flex flex-row items-center space-x-4">
             <p className="text-white">Login</p>
