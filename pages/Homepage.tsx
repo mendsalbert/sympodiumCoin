@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import CountUp from "react-countup";
 type Props = {};
 
 const Homepage = (props: Props) => {
+  const listInnerRef = useRef();
+
+  const onScroll = () => {
+    if (listInnerRef.current) {
+      const { scrollTop, scrollHeight, clientHeight } = listInnerRef.current;
+      if (scrollTop + clientHeight === scrollHeight) {
+        console.log("reached bottom");
+      }
+    }
+  };
   return (
     <div>
       <div className="flex flex-row justify-between space-x-16 items-start my-20 w-full">
@@ -38,7 +48,11 @@ const Homepage = (props: Props) => {
           src="/images/circle2.png"
           className="w-64 absolute top-12 ml-32 left-96 -z-0"
         />
-        <div className="grid grid-cols-3 gap-24 my-32">
+        <div
+          className="grid grid-cols-3 gap-24 my-32"
+          onScroll={onScroll}
+          ref={listInnerRef}
+        >
           <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative  bg-gradient-to-r from-[#ffffff8c] to-[#fff7007a] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl   backdrop-filter: blur(20px)">
             <div className="text-center  mb-7 justify-between ">
               <p className="uppercase text-7xl font-bold py-4 ">
