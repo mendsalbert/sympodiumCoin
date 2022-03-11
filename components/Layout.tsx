@@ -80,7 +80,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                   </div>
 
                   <div className="my-12 space-y-6">
-                    <div className="flex flex-row items-center cursor-pointer space-x-3">
+                    <div className="flex flex-row items-center cursor-pointer space-x-3 ">
                       <CubeIcon className="h-9 text-white" />
 
                       <p className="text-white">Blockchians</p>
