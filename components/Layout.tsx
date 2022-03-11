@@ -2,7 +2,11 @@ import React, { ReactNode, useRef } from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { MenuAlt2Icon, XIcon } from "@heroicons/react/solid";
-import { CubeIcon } from "@heroicons/react/outline";
+import {
+  CubeIcon,
+  CreditCardIcon,
+  PhotographIcon,
+} from "@heroicons/react/outline";
 import { Menu } from "react-ionicons";
 type Props = {
   children?: ReactNode;
@@ -55,12 +59,13 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
               className="w-0 transition-width duration-200 delay-75 ease-in-out bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE]  lg:hidden overflow-auto h-full fixed shadow-2xl top-0 left-0 z-50"
             >
               <div className="flex flex-col p-6 relative">
-                <div
-                  onClick={() => {
-                    closeMenu();
-                  }}
-                >
-                  <XIcon className="text-white h-9 absolute top-0 right-0 m-2 mb-10" />
+                <div>
+                  <XIcon
+                    onClick={() => {
+                      closeMenu();
+                    }}
+                    className="text-white h-9 absolute top-0 right-0 m-2 mb-10"
+                  />
 
                   <div>
                     <div className="pt-10 my-3 space-y-5">
@@ -74,12 +79,25 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                     </div>
                   </div>
 
-                  <div className="my-12">
-                    <div className="flex flex-row items-center space-x-3">
+                  <div className="my-12 space-y-6">
+                    <div className="flex flex-row items-center cursor-pointer space-x-3">
                       <CubeIcon className="h-9 text-white" />
 
                       <p className="text-white">Blockchians</p>
                     </div>
+
+                    <div className="flex flex-row items-center cursor-pointer space-x-3">
+                      <CreditCardIcon className="h-9 text-white" />
+
+                      <p className="text-white">Wallet</p>
+                    </div>
+
+                    <div className="flex flex-row items-center cursor-pointer space-x-3">
+                      <PhotographIcon className="h-9 text-white" />
+
+                      <p className="text-white">NFT's</p>
+                    </div>
+                    {/* <hr className="my-3" /> */}
                   </div>
                 </div>
               </div>
