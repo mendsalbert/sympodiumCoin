@@ -103,7 +103,7 @@ const Homepage = (props: Props) => {
       </div>
 
       <div className="my-20 flex flex-col items-center">
-        <div className="uppercase  rounded-full text-center py-2 px-5 text-white text-lg w-4/12 cursor-default bg-gradient-to-r from-pink-500 to-yellow-500 ">
+        <div className="uppercase  rounded-full text-center py-2 px-5 text-white text-lg w-6/12 lg:w-4/12 cursor-default bg-gradient-to-r from-pink-500 to-yellow-500 ">
           About us
         </div>
 
