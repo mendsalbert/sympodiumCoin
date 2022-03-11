@@ -1,8 +1,8 @@
-import React, { ReactNode, useRef, useState } from "react";
+import React, { ReactNode, useRef, useState, useEffect } from "react";
 import Head from "next/head";
 import { Html } from "next/document";
 import { motion } from "framer-motion";
-import { MenuAlt2Icon, MoonIcon, XIcon } from "@heroicons/react/solid";
+import { MenuAlt2Icon, MoonIcon, SunIcon, XIcon } from "@heroicons/react/solid";
 import {
   CubeIcon,
   CreditCardIcon,
@@ -16,6 +16,7 @@ type Props = {
 
 const Layout = ({ children, title = "This is the default title" }: Props) => {
   const toggleRef = useRef(null);
+  const htmlRef = useRef(null);
   const [toggle, setToggle] = useState(false);
 
   const openMenu = () => {
@@ -28,12 +29,37 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
 
   const toggleMode = () => {
     setToggle(!toggle);
-    console.log(toggle);
   };
-  return (
-    // <Html className="dark">
 
-    <html className={toggle ? "dark" : ""}>
+  const html = htmlRef.current;
+  const setTheme = () => {
+    setToggle(!toggle);
+    // setChecked((prev) => !prev);
+    if (typeof window === "object") {
+      if (toggle) {
+        localStorage.setItem("theme", "dark");
+        html.classList.add("dark");
+      } else {
+        html.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window === "object") {
+      let theme = localStorage.getItem("theme");
+      if (theme === "dark") {
+        setTheme();
+      } else {
+      }
+    }
+  }, []);
+  return (
+    <html
+      ref={htmlRef}
+      className={toggle ? "dark" : "transition-colors delay-200"}
+    >
       <motion.header
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -58,6 +84,36 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                 <div className="bg-[#5F6FFB] py-2 px-4 text-white rounded-md text-center">
                   Sign Up
                 </div>
+                <div
+                  onClick={() => {
+                    console.log("something");
+                    setTheme();
+                    toggle
+                      ? html.classList.add("dark")
+                      : html.classList.remove("dark");
+                  }}
+                >
+                  {!toggle ? (
+                    <MoonIcon
+                      onClick={() => {
+                        toggleMode();
+                        setTheme();
+                        html.classList.remove("dark");
+                      }}
+                      className="h-10 text-white cursor-pointer"
+                    />
+                  ) : (
+                    <SunIcon
+                      onClick={() => {
+                        toggleMode();
+                        setTheme();
+                        html.classList.add("dark");
+                      }}
+                      className="h-10 text-white cursor-pointer"
+                    />
+                  )}
+                </div>
+
                 <img src="/images/avtr.png " className="w-14" />
               </div>
             </nav>
@@ -120,12 +176,22 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                 />
               </div>
               <div className="flex flex-row items-center space-x-0">
-                <MoonIcon
-                  onClick={() => {
-                    toggleMode();
-                  }}
-                  className="h-10 text-white cursor-pointer"
-                />
+                {!toggle ? (
+                  <MoonIcon
+                    onClick={() => {
+                      toggleMode();
+                    }}
+                    className="h-10 text-white cursor-pointer"
+                  />
+                ) : (
+                  <SunIcon
+                    onClick={() => {
+                      toggleMode();
+                    }}
+                    className="h-10 text-white cursor-pointer"
+                  />
+                )}
+
                 <img src="/images/avtr.png " className="w-14" />
               </div>
             </nav>
