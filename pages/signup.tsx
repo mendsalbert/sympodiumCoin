@@ -7,7 +7,7 @@ const Signup = (props: Props) => {
   return (
     <Layout>
       <div className="  flex flex-col justify-center items-center ">
-        <div className=" text-white font-bold p-6 flex flex-col justify-between w-full lg:w-7/12 relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl backdrop-filter: blur(20px)">
+        <div className="space-y-5 text-white font-bold p-6 flex flex-col justify-between w-full lg:w-7/12 relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl backdrop-filter: blur(20px)">
           <div>
             <input
               id="email"
