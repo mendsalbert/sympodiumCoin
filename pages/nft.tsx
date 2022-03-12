@@ -21,7 +21,9 @@ const Blocks = (props: Props) => {
             NFT
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4  my-12 gap-4 lg:gap-8"></div>
+        <div className="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4  my-12 gap-4 lg:gap-8">
+          <div className="rounded-tr-md rounded-tl-md "></div>
+        </div>
         <div>
           <div className="max-w-8xl mx-auto container py-10">
             <ul className="flex justify-center items-center">
