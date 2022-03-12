@@ -21,8 +21,7 @@ const Blocks = (props: Props) => {
         <img src="/images/cube.png" className="w-32" />
       </div>
       <div className="grid grid-cols-4 my-12 gap-8">
-        <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)"></div>
-        <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
+        <div className=" text-center space-y-3 text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
           <div className="flex flex-row items-center cursor-pointer space-x-3">
             <HashtagIcon className="h-9 text-white" />
             <p className="text-white">Block number</p>
@@ -38,12 +37,89 @@ const Blocks = (props: Props) => {
             <p className="text-white">Hash</p>
           </div>
         </div>
-        <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)"></div>
-        <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)"></div>
-        <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)"></div>
-        <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)"></div>
-        <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)"></div>
-        <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)"></div>
+        <div className=" text-center space-y-3 text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
+          <div className="flex flex-row items-center cursor-pointer space-x-3">
+            <HashtagIcon className="h-9 text-white" />
+            <p className="text-white">Block number</p>
+          </div>
+
+          <div className="flex flex-row items-center cursor-pointer space-x-3">
+            <ClockIcon className="h-9 text-white" />
+            <p className="text-white">Time Stamp</p>
+          </div>
+
+          <div className="flex flex-row items-center cursor-pointer space-x-3">
+            <CubeTransparentIcon className="h-9 text-white" />
+            <p className="text-white">Hash</p>
+          </div>
+        </div>
+        <div className=" text-center space-y-3 text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
+          <div className="flex flex-row items-center cursor-pointer space-x-3">
+            <HashtagIcon className="h-9 text-white" />
+            <p className="text-white">Block number</p>
+          </div>
+
+          <div className="flex flex-row items-center cursor-pointer space-x-3">
+            <ClockIcon className="h-9 text-white" />
+            <p className="text-white">Time Stamp</p>
+          </div>
+
+          <div className="flex flex-row items-center cursor-pointer space-x-3">
+            <CubeTransparentIcon className="h-9 text-white" />
+            <p className="text-white">Hash</p>
+          </div>
+        </div>
+
+        <div className=" text-center space-y-3 text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
+          <div className="flex flex-row items-center cursor-pointer space-x-3">
+            <HashtagIcon className="h-9 text-white" />
+            <p className="text-white">Block number</p>
+          </div>
+
+          <div className="flex flex-row items-center cursor-pointer space-x-3">
+            <ClockIcon className="h-9 text-white" />
+            <p className="text-white">Time Stamp</p>
+          </div>
+
+          <div className="flex flex-row items-center cursor-pointer space-x-3">
+            <CubeTransparentIcon className="h-9 text-white" />
+            <p className="text-white">Hash</p>
+          </div>
+        </div>
+
+        <div className=" text-center space-y-3 text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
+          <div className="flex flex-row items-center cursor-pointer space-x-3">
+            <HashtagIcon className="h-9 text-white" />
+            <p className="text-white">Block number</p>
+          </div>
+
+          <div className="flex flex-row items-center cursor-pointer space-x-3">
+            <ClockIcon className="h-9 text-white" />
+            <p className="text-white">Time Stamp</p>
+          </div>
+
+          <div className="flex flex-row items-center cursor-pointer space-x-3">
+            <CubeTransparentIcon className="h-9 text-white" />
+            <p className="text-white">Hash</p>
+          </div>
+        </div>
+
+        <div className=" text-center space-y-3 text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606ab] to-[#5100ffa6] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
+          <div className="flex flex-row items-center cursor-pointer space-x-3">
+            <HashtagIcon className="h-9 text-white" />
+            <p className="text-white">Block number</p>
+          </div>
+
+          <div className="flex flex-row items-center cursor-pointer space-x-3">
+            <ClockIcon className="h-9 text-white" />
+            <p className="text-white">Time Stamp</p>
+          </div>
+
+          <div className="flex flex-row items-center cursor-pointer space-x-3">
+            <CubeTransparentIcon className="h-9 text-white" />
+            <p className="text-white">Hash</p>
+          </div>
+        </div>
       </div>
     </div>
   );
