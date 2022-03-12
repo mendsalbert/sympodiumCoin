@@ -17,9 +17,7 @@ const IndexPage = () => {
   } else {
     return (
       <Layout title="sympodium coin">
-        {/* <Homepage /> */}
-        {/* <Blocks /> */}
-        <Wallet />
+        <Homepage />
       </Layout>
     );
   }
