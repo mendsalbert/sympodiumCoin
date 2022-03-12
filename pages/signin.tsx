@@ -39,7 +39,7 @@ const SignIn = (props: Props) => {
         <p className="text-white text-lg  pt-5">
           Haven't signed up ?{" "}
           <a href="/signin" className="underline text-blue-200">
-            Sign In
+            Sign Up
           </a>
         </p>
       </div>
