@@ -28,8 +28,8 @@ const Wallet = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="my-14 text-left ">
-        <p>Transactions</p>
+      <div className="my-14 text-white w-full  text-left ">
+        <p>Transactions (2)</p>
       </div>
     </div>
   );
