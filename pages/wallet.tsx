@@ -34,23 +34,16 @@ const Wallet = (props: Props) => {
 
         <div className="w-full">
           <div className="w-full p-3 mt-8 bg-white rounded flex">
-            <div
-              aria-label="heart icon"
-              role="img"
-              className="focus:outline-none w-8 h-8 border rounded-full border-gray-200 flex items-center justify-center"
-            >
-              <img
-                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/notification_1-svg2.svg"
-                alt="icon"
-              />
-            </div>
+            <TicketIcon className="h-7 text-gray-700" />
             <div className="pl-3">
               <p className="focus:outline-none text-sm leading-none">
-                <span className="text-indigo-700">James Doe</span> favourited an{" "}
-                <span className="text-indigo-700">item</span>
+                <span className="text-indigo-700">To:</span>
               </p>
               <p className="focus:outline-none text-xs leading-3 pt-1 text-gray-500">
-                2 hours ago
+                Amount:
+              </p>
+              <p className="focus:outline-none text-xs leading-3 pt-1 text-gray-500">
+                Date:
               </p>
             </div>
           </div>
