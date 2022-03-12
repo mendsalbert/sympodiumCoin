@@ -179,7 +179,7 @@ const Layout = ({
                       <div className="pt-10 my-3 space-y-5">
                         {/* <p className="text-white">Login</p> */}
                         <div className=" py-2 px-4 text-white border-2 border-white rounded-md text-center">
-                          <Link href="/login">Log In</Link>
+                          <Link href="/signin">Log In</Link>
                         </div>
                         <div className="bg-blue-800 py-2 px-4 text-white rounded-md text-center">
                           <Link href="/signup">Sign Up</Link>
