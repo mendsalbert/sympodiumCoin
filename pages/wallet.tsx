@@ -10,7 +10,9 @@ import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Modal from "../components/organisms/Modal";
 
-type Props = {};
+type Props = {
+  onCloseModal: void;
+};
 
 const Wallet = (props: Props) => {
   const [address, setAddress] = useState("");
@@ -39,7 +41,15 @@ const Wallet = (props: Props) => {
   return (
     <Layout complete={true}>
       <div className="  flex flex-col lg:flex-col justify-between w-full items-start lg:space-x-0">
-        {modal ? <Modal /> : ""}
+        {modal ? (
+          <Modal
+            onCloseModal={() => {
+              setModal(false);
+            }}
+          />
+        ) : (
+          ""
+        )}
 
         <div className=" mt-12 mb-5 lg:mb-0 lg:my-14 w-full lg:w-6/12 lg:flex lg:flex-col lg:self-center ">
           <div className=" text-black font-bold  p-6 flex flex-col justify-between  relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 bg-gradient-to-r from-[#ffcc33] via-[#ffd700] to-[#e1ad21]  backdrop-filter: blur(20px)">

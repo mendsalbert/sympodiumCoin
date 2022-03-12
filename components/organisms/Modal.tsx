@@ -1,17 +1,19 @@
 import React from "react";
 
-type Props = {};
+type Props = {
+  onCloseModal: Function;
+};
 
 const Modal = (props: Props) => {
   return (
     <div>
       <div
-        className="py-12 bg-[#0000009f] w-full  transition duration-150 ease-in-out z-50 absolute top-0 right-0 bottom-0 left-0"
+        className=" rounded-lg py-12 bg-[#0000009f] w-full h-full  transition duration-150 ease-in-out z-50 fixed top-0 right-0 bottom-0 left-0"
         id="modal"
       >
         <div
           role="alert"
-          className="container mx-auto w-11/12 md:w-2/3 max-w-lg "
+          className="container mx-auto w-11/12 md:w-2/3 max-w-lg mt-28"
         >
           <div className="relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
             <div className="w-full flex justify-start text-gray-600 mb-3">
@@ -48,7 +50,10 @@ const Modal = (props: Props) => {
               <button className="w-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-8 py-2 text-sm">
                 Submit
               </button>
-              <button className=" w-full focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-gray-400 ml-3 bg-gray-100 transition duration-150 text-gray-600 ease-in-out hover:border-gray-400 hover:bg-gray-300 border rounded px-8 py-2 text-sm">
+              <button
+                onClick={() => props.onCloseModal()}
+                className=" w-full focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-gray-400 ml-3 bg-gray-100 transition duration-150 text-gray-600 ease-in-out hover:border-gray-400 hover:bg-gray-300 border rounded px-8 py-2 text-sm"
+              >
                 Cancel
               </button>
             </div>
@@ -56,6 +61,7 @@ const Modal = (props: Props) => {
               className="cursor-pointer absolute top-0 right-0 mt-4 mr-5 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out rounded focus:ring-2 focus:outline-none focus:ring-gray-600"
               aria-label="close modal"
               role="button"
+              onClick={() => props.onCloseModal()}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
