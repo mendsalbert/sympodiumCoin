@@ -31,8 +31,8 @@ const Blocks = (props: Props) => {
             </div>
             <div className="p-2">
               <p className="text-xl font-bold text-black">Cat</p>
-              <p className="text-lg font-bold text-gray-600">Some short dec</p>
-              <p>0.01ETH</p>
+              <p className="text-lg  text-gray-700">Some short dec</p>
+              <p className="text-lg font-bold text-red-600">0.01ETH</p>
               <div></div>
             </div>
           </div>
