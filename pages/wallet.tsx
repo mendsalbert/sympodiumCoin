@@ -30,6 +30,16 @@ const Wallet = (props: Props) => {
       </div>
       <div className="my-14 text-white w-full  text-left ">
         <p>Transactions (2)</p>
+
+        <div className="w-full">
+          <div className="flex flex-row space-x-6 ">
+            <div className="bg-white rounded-md"></div>
+            <div>
+              <p>To: </p>
+              <p>Amout:</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
