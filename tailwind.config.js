@@ -22,6 +22,7 @@ module.exports = {
         "discord-logo": "url('/images/discord.png')",
         "linkedln-logo": "url('/images/linkedln.png')",
         cube: "url('/images/cube.png')",
+        nft: "url('/images/nft.png')",
       },
     },
   },
