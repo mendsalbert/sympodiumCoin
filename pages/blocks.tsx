@@ -48,7 +48,7 @@ const Blocks = (props: Props) => {
           </p>
           <img src="/images/cube.png" className="w-32" />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4  my-12 gap-4 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  my-12 gap-4 lg:gap-8">
           {block.map((chain, index) => (
             <div className=" text-center space-y-3 text-white font-bold p-6 flex flex-col justify-between  relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
               <div className="flex flex-row items-center cursor-pointer space-x-3">
@@ -59,7 +59,7 @@ const Blocks = (props: Props) => {
               <div className="flex flex-row items-center cursor-pointer space-x-3">
                 <ClockIcon className="h-9 text-white" />
                 <p className="text-white text-xs md:text-lg text-left">
-                  {dateFormat(chain.timestamp, "isoDateTime")}
+                  {dateFormat(chain.timestamp, "dd:mm:yy - h:MM:ss ")}
                 </p>
               </div>
 
