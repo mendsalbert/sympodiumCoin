@@ -1,4 +1,9 @@
-import { TicketIcon } from "@heroicons/react/outline";
+import {
+  CashIcon,
+  ClockIcon,
+  TicketIcon,
+  UserIcon,
+} from "@heroicons/react/outline";
 import React from "react";
 
 type Props = {};
@@ -37,13 +42,13 @@ const Wallet = (props: Props) => {
             <TicketIcon className="h-8 text-gray-700" />
             <div className="pl-3 space-y-2">
               <p className="focus:outline-none text-md leading-3 pt-1 text-gray-500">
-                Reciever :
+                <UserIcon className="h-8 text-gray-700" />
               </p>
               <p className="focus:outline-none text-md leading-3 pt-1 text-gray-500">
-                Amount:
+                <CashIcon className="h-8 text-gray-700" />
               </p>
               <p className="focus:outline-none text-md leading-3 pt-1 text-gray-500">
-                Date:
+                <ClockIcon className="h-8 text-gray-700" />
               </p>
             </div>
           </div>
