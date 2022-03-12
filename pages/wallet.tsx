@@ -11,9 +11,12 @@ const Wallet = (props: Props) => {
             <img src="/images/cardlogo.png" className="w-16" />
             <p className="uppercase text-lg">Sympodium</p>
           </div>
-          <div className="space-y-4">
-            <p className="text-xl ">0aB3 XXXX XXXX XXXX XXXX</p>
-            <p className="text-xl">MENDS ALBERT</p>
+          <div className="flex flex-row justify-between items-center space-y-4">
+            <div>
+              <p className="text-xl ">0aB3 XXXX XXXX XXXX XXXX</p>
+              <p className="text-xl">MENDS ALBERT</p>
+            </div>
+            <p className="text-3xl">1000 SC</p>
           </div>
         </div>
       </div>
