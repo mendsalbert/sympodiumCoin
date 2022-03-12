@@ -23,15 +23,56 @@ const Blocks = (props: Props) => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-3  my-12 gap-4 lg:gap-8">
           <div className="rounded-tr-xl  bg-white rounded-tl-xl ">
-            {/* <div className="">
+            <div className="bg-yellow-300 rounded-tr-xl  rounded-tl-xl">
               <img
+                className="object-cover h-48 w-96  rounded-tr-xl  rounded-tl-xl"
                 src="/images/0x0.png"
-                className="object-cover rounded-bl-none rounded-br-none "
               />
-            </div> */}
-            <div className="bg-yellow-300">
-  <img className="object-none h-48 w-96" src="/images/0x0.png"/>
-</div>
+            </div>
+            <div className="p-2">
+              <p className="text-xl font-bold text-black">Cat</p>
+              <p className="text-lg  text-gray-700">Some short dec</p>
+              <p className="text-lg font-bold text-red-600">0.01ETH</p>
+              <div className=" flex space-x-2 my-1 flex-row items-center justify-between">
+                <div className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] ">
+                  MINT
+                </div>
+                <div className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg w-full  bg-gradient-to-r from-[#FF1E1E] to-[#5200FF] ">
+                  TRANSFER
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-tr-xl  bg-white rounded-tl-xl ">
+            <div className="bg-yellow-300 rounded-tr-xl  rounded-tl-xl">
+              <img
+                className="object-cover h-48 w-96  rounded-tr-xl  rounded-tl-xl"
+                src="/images/01.jpg"
+              />
+            </div>
+            <div className="p-2">
+              <p className="text-xl font-bold text-black">Cat</p>
+              <p className="text-lg  text-gray-700">Some short dec</p>
+              <p className="text-lg font-bold text-red-600">0.01ETH</p>
+              <div className=" flex space-x-2 my-1 flex-row items-center justify-between">
+                <div className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] ">
+                  MINT
+                </div>
+                <div className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg w-full  bg-gradient-to-r from-[#FF1E1E] to-[#5200FF] ">
+                  TRANSFER
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-tr-xl  bg-white rounded-tl-xl ">
+            <div className="bg-yellow-300 rounded-tr-xl  rounded-tl-xl">
+              <img
+                className="object-cover h-48 w-96  rounded-tr-xl  rounded-tl-xl"
+                src="/images/02.png"
+              />
+            </div>
             <div className="p-2">
               <p className="text-xl font-bold text-black">Cat</p>
               <p className="text-lg  text-gray-700">Some short dec</p>
