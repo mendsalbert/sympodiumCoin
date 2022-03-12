@@ -173,28 +173,60 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                         <HomeIcon className="h-9 text-white" />
 
                         <Link href="/">
-                          <p className="text-white">Home</p>
+                          <p
+                            className={
+                              router.pathname === "/"
+                                ? "cursor-pointer text-white font-bold border-b-2 border-green-400"
+                                : "cursor-pointer text-white"
+                            }
+                          >
+                            Home
+                          </p>
                         </Link>
                       </div>
                       <div className="flex flex-row items-center cursor-pointer space-x-3 ">
                         <CubeIcon className="h-9 text-white" />
 
                         <Link href="/blocks">
-                          <p className="text-white">Blockchians</p>
+                          <p
+                            className={
+                              router.pathname === "/blocks"
+                                ? "cursor-pointer text-white font-bold border-b-2 border-green-400"
+                                : "cursor-pointer text-white"
+                            }
+                          >
+                            Blockchians
+                          </p>
                         </Link>
                       </div>
 
                       <div className="flex flex-row items-center cursor-pointer space-x-3">
                         <CreditCardIcon className="h-9 text-white" />
                         <Link href="/wallet">
-                          <p className="text-white">Wallet</p>
+                          <p
+                            className={
+                              router.pathname === "/wallet"
+                                ? "cursor-pointer text-white font-bold border-b-2 border-green-400"
+                                : "cursor-pointer text-white"
+                            }
+                          >
+                            Wallet
+                          </p>
                         </Link>
                       </div>
 
                       <div className="flex flex-row items-center cursor-pointer space-x-3">
                         <PhotographIcon className="h-9 text-white" />
                         <Link href="/nft">
-                          <p className="text-white">NFT's</p>
+                          <p
+                            className={
+                              router.pathname === "/nft"
+                                ? "cursor-pointer text-white font-bold border-b-2 border-green-400"
+                                : "cursor-pointer text-white"
+                            }
+                          >
+                            NFT's
+                          </p>
                         </Link>
                       </div>
                       {/* <hr className="my-3" /> */}
