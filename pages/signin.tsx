@@ -3,10 +3,10 @@ import Layout from "../components/Layout";
 
 type Props = {};
 
-const Signup = (props: Props) => {
+const SignIn = (props: Props) => {
   return (
     <Layout complete={false}>
-      <div className="w-full h-screen  flex flex-col justify-center items-center ">
+      <div className="w-full h-screen -mt-24 md:-mt-16 lg:mt-0 flex flex-col justify-center items-center ">
         <div>
           <img className="w-20" src="/images/logo.png" />
         </div>
@@ -32,17 +32,8 @@ const Signup = (props: Props) => {
             />
           </div>
 
-          <div>
-            <input
-              id="email"
-              aria-labelledby="password"
-              type="password"
-              className="bg-white dark:text-white focus:outline-none  rounded-xl text-lg font-medium leading-none placeholder-gray-800 text-gray-800 py-3 w-full pl-3 mt-2  bg-opacity-30 shadow-lg backdrop-filter: blur(20px)"
-              placeholder="confirm password "
-            />
-          </div>
           <div className="uppercase  rounded-xl text-center py-2 px-5 text-white text-lg w-full cursor-pointer bg-gradient-to-r from-pink-500 to-yellow-500 ">
-            SIGN UP
+            SIGN IN
           </div>
         </div>
       </div>
@@ -50,4 +41,4 @@ const Signup = (props: Props) => {
   );
 };
 
-export default Signup;
+export default SignIn;
