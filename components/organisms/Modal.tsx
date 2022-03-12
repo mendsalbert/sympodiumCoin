@@ -10,7 +10,7 @@ const Modal = (props: Props) => {
   return (
     <div>
       <div
-        className=" rounded-lg py-12 bg-[#0000009f] w-full h-full  transition duration-150 ease-in-out z-50 fixed top-0 right-0 bottom-0 left-0"
+        className=" rounded-lg py-12 bg-[#0000009f] w-full h-full  transition duration-150 ease-in-out z-50 absolute top-0 right-0 bottom-0 left-0"
         id="modal"
       >
         <div
