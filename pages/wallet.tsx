@@ -15,7 +15,7 @@ type Props = {};
 const Wallet = (props: Props) => {
   const [address, setAddress] = useState("");
   const [balance, setBalance] = useState("");
-
+  const [modal, setModal] = useState(false);
   const truncateString = (str, num) => {
     if (str.length <= num) {
       return str;
@@ -39,7 +39,7 @@ const Wallet = (props: Props) => {
   return (
     <Layout complete={true}>
       <div className="  flex flex-col lg:flex-col justify-between w-full items-start lg:space-x-0">
-        {/* <Modal /> */}
+        {modal ? <Modal /> : ""}
 
         <div className=" mt-12 mb-5 lg:mb-0 lg:my-14 w-full lg:w-6/12 lg:flex lg:flex-col lg:self-center ">
           <div className=" text-black font-bold  p-6 flex flex-col justify-between  relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 bg-gradient-to-r from-[#ffcc33] via-[#ffd700] to-[#e1ad21]  backdrop-filter: blur(20px)">
@@ -63,7 +63,12 @@ const Wallet = (props: Props) => {
             </div>
           </div>
           <div className=" flex space-x-0 space-y-4 md:space-x-3 md:space-y-0 lg:space-y-0 lg:space-x-5 my-5 flex-col w-full md:flex-row lg:flex-row items-center justify-between">
-            <div className="uppercase cursor-pointer text-md  rounded-md w-full text-center py-2 px-5 text-white lg:text-lg  lg:w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] ">
+            <div
+              onClick={() => {
+                setModal(true);
+              }}
+              className="uppercase cursor-pointer text-md  rounded-md w-full text-center py-2 px-5 text-white lg:text-lg  lg:w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] "
+            >
               TRANSFER
             </div>
             <div className="uppercase cursor-pointer text-md  rounded-md w-full text-center py-2 px-5 text-white lg:text-lg  lg:w-full  bg-gradient-to-r  from-[#FF1E1E] to-[#5200FF] ">
