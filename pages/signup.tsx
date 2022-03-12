@@ -13,7 +13,7 @@ const Signup = (props: Props) => {
               id="email"
               aria-labelledby="email"
               type="email"
-              className="bg-gray-200 border rounded text-xs font-medium leading-none placeholder-gray-800 text-gray-800 py-3 w-full pl-3 mt-2"
+              className="bg-white  focus:outline-none  rounded text-lg font-medium leading-none placeholder-gray-800 text-gray-800 py-3 w-full pl-3 mt-2  bg-opacity-30 shadow-lg backdrop-filter: blur(20px)"
               placeholder="e.g: john@gmail.com "
             />
           </div>
