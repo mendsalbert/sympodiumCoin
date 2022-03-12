@@ -1,11 +1,13 @@
 import React from "react";
+import Layout from "../components/Layout";
 
 type Props = {};
 
 const Signup = (props: Props) => {
   return (
-    <div className="font-Montserrat  flex flex-col justify-center items-center dark:bg-main-background-dark bg-main-background bg-cover overflow-x-hidden  bg-no-repeat  bg-center h-screen">
-      <div className="animate-pulse text-white font-bold p-6 flex flex-col justify-between w-full lg:w-7/12 relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
+    <Layout>
+      {/* <div className="font-Montserrat  flex flex-col justify-center items-center dark:bg-main-background-dark bg-main-background bg-cover overflow-x-hidden  bg-no-repeat  bg-center h-screen"> */}
+      <div className=" text-white font-bold p-6 flex flex-col justify-between w-full lg:w-7/12 relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
         <div className="flex flex-row items-center mb-5 lg:mb-14 justify-between ">
           <img src="/images/cardlogo.png" className="w-16" />
           <p className="uppercase text-lg">Sympodium</p>
@@ -15,7 +17,8 @@ const Signup = (props: Props) => {
           <p className="text-xl">SYMPODIUM COIN</p>
         </div>
       </div>
-    </div>
+      {/* </div> */}
+    </Layout>
   );
 };
 
