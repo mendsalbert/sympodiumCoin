@@ -22,7 +22,7 @@ const Wallet = (props: Props) => {
               <p className="text-md lg:text-xl">0aB3 XXXX XXXX XXXX XXXX</p>
               <p className="text-md lg:text-xl">MENDS ALBERT</p>
             </div>
-            <p className="text-xl lg:text-3xl ">1000 SC</p>
+            <p className="text-xl lg:text-3xl ">1000SC </p>
           </div>
         </div>
         <div className=" flex space-x-5 my-5 flex-row items-center justify-between">
