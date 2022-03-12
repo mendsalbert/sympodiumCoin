@@ -13,16 +13,16 @@ type Props = {};
 const Blocks = (props: Props) => {
   return (
     <div className="my-16">
-      <div className="flex flex-row items-center justify-center space-x-4">
+      <div className="  flex flex-col lg:flex-row items-center justify-center space-x-4">
         <p className="font-extrabold flex flex-row space-x-2 text-center text-white text-5xl  lg:text-6xl ">
-          <p className="font-extrabold  text-white md:text-transparent  text-[2.5rem] md:text-5xl w-full lg:text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+          <p className="font-extrabold   text-transparent   md:text-5xl w-full lg:text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
             <CountUp delay={1} end={150} />+
           </p>
           Blocks
         </p>
         <img src="/images/cube.png" className="w-32" />
       </div>
-      <div className="grid grid-cols-4 my-12 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4  my-12 gap-4 lg:gap-8">
         <div className=" text-center space-y-3 text-white font-bold p-6 flex flex-col justify-between  relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
           <div className="flex flex-row items-center cursor-pointer space-x-3">
             <HashtagIcon className="h-9 text-white" />
