@@ -6,19 +6,35 @@ import {
   CubeTransparentIcon,
   HashtagIcon,
 } from "@heroicons/react/outline";
-import React from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 import CountUp from "react-countup";
 import Layout from "../components/Layout";
 type Props = {};
 
 const Blocks = (props: Props) => {
+  const [block, setBlock] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3002/api/blocks")
+      .then((res) => {
+        let response = res.data;
+        // console.log(response.blockchain.chain);
+        setBlock(response.blockchain.chain);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
+
   return (
     <Layout complete={true}>
       <div className="my-16">
         <div className="  flex flex-col lg:flex-row items-center justify-center space-x-4">
           <p className="font-extrabold flex flex-row space-x-2 text-center text-white text-5xl  lg:text-6xl ">
             <p className="font-extrabold   text-transparent   md:text-5xl w-full lg:text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-              <CountUp delay={1} end={150} />+
+              <CountUp delay={1} end={block.length} />+{" "}
             </p>
             Blocks
           </p>
