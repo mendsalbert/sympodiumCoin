@@ -34,15 +34,15 @@ const Wallet = (props: Props) => {
 
         <div className="w-full">
           <div className="w-full p-3 mt-8 bg-white rounded flex">
-            <TicketIcon className="h-7 text-gray-700" />
-            <div className="pl-3">
-              <p className="focus:outline-none text-sm leading-none">
-                <span className="text-indigo-700">To:</span>
+            <TicketIcon className="h-8 text-gray-700" />
+            <div className="pl-3 space-y-2">
+              <p className="focus:outline-none text-md leading-3 pt-1 text-gray-500">
+                Reciever :
               </p>
-              <p className="focus:outline-none text-xs leading-3 pt-1 text-gray-500">
+              <p className="focus:outline-none text-md leading-3 pt-1 text-gray-500">
                 Amount:
               </p>
-              <p className="focus:outline-none text-xs leading-3 pt-1 text-gray-500">
+              <p className="focus:outline-none text-md leading-3 pt-1 text-gray-500">
                 Date:
               </p>
             </div>
