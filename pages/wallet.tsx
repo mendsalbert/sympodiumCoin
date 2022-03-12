@@ -13,7 +13,7 @@ const Wallet = (props: Props) => {
   return (
     <Layout>
       <div className="flex flex-col lg:flex-col justify-between w-full items-start lg:space-x-0">
-        <div className=" mt-12 mb-5 lg:mb-0 lg:my-14 w-6/12 flex flex-col self-center ">
+        <div className=" mt-12 mb-5 lg:mb-0 lg:my-14 w-full lg:w-6/12 lg:flex lg:flex-col lg:self-center ">
           <div className=" text-black font-bold  p-6 flex flex-col justify-between  relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 bg-gradient-to-r from-[#ffcc33] via-[#ffd700] to-[#e1ad21]  backdrop-filter: blur(20px)">
             <div className="flex flex-row items-center mb-5 lg:mb-14 justify-between ">
               <img src="/images/cardlogo.png" className="w-16" />
