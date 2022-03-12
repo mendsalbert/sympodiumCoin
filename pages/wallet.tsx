@@ -27,11 +27,11 @@ const Wallet = (props: Props) => {
               <p className="text-xl lg:text-3xl ">1000SC </p>
             </div>
           </div>
-          <div className=" flex space-x-5 my-5 flex-row items-center justify-between">
-            <div className="uppercase cursor-pointer  rounded-md text-center py-2 px-5 text-white text-lg w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] ">
+          <div className=" flex space-x-0 space-y-4 md:space-x-3 ,d:space-y-0 lg:space-y-0 lg:space-x-5 my-5 flex-col w-full md:flex-row lg:flex-row items-center justify-between">
+            <div className="uppercase cursor-pointer text-md  rounded-md w-full text-center py-2 px-5 text-white lg:text-lg  lg:w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] ">
               TRANSFER
             </div>
-            <div className="uppercase cursor-pointer  rounded-md text-center py-2 px-5 text-white text-lg w-full  bg-gradient-to-r from-[#FF1E1E] to-[#5200FF] ">
+            <div className="uppercase cursor-pointer text-md  rounded-md w-full text-center py-2 px-5 text-white lg:text-lg  lg:w-full  bg-gradient-to-r  from-[#FF1E1E] to-[#5200FF] ">
               WITHDRAW
             </div>
           </div>
