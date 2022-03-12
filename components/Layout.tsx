@@ -58,9 +58,9 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
       className={toggle ? "dark" : "transition-colors delay-200"}
     >
       <motion.header
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8 }}
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // transition={{ delay: 0.1 }}
       >
         <div className="font-Montserrat px-4  md:px-20  lg:px-48 dark:bg-main-background-dark bg-main-background bg-cover overflow-x-hidden  bg-no-repeat  bg-center h-screen">
           <Head>
