@@ -53,19 +53,21 @@ const Blocks = (props: Props) => {
             <div className=" text-center space-y-3 text-white font-bold p-6 flex flex-col justify-between  relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
               <div className="flex flex-row items-center cursor-pointer space-x-3">
                 <HashtagIcon className="h-9 text-white" />
-                <p className="text-white">{index + 1}</p>
+                <p className="text-white text-xs md:text-lg">{index + 1}</p>
               </div>
 
               <div className="flex flex-row items-center cursor-pointer space-x-3">
                 <ClockIcon className="h-9 text-white" />
-                <p className="text-white">
+                <p className="text-white text-xs md:text-lg text-left">
                   {dateFormat(chain.timestamp, "isoDateTime")}
                 </p>
               </div>
 
               <div className="flex flex-row items-center cursor-pointer space-x-3">
                 <CubeTransparentIcon className="h-9 text-white" />
-                <p className="text-white">{truncateString(chain.hash, 20)}</p>
+                <p className="text-white text-xs md:text-lg">
+                  {truncateString(chain.hash, 20)}
+                </p>
               </div>
             </div>
           ))}
