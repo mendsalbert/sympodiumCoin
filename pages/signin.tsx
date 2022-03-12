@@ -6,7 +6,7 @@ type Props = {};
 const SignIn = (props: Props) => {
   return (
     <Layout complete={false}>
-      <div className="w-full h-screen -mt-18 md:-mt-16 lg:mt-0 flex flex-col justify-center items-center ">
+      <div className="w-full h-screen flex flex-col mt-12 lg:mt-0 lg:justify-center items-center ">
         <div>
           <img className="w-20" src="/images/logo.png" />
         </div>
