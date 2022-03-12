@@ -20,6 +20,15 @@ const Wallet = (props: Props) => {
           </div>
         </div>
       </div>
+
+      <div className="w-6/12 flex flex-row items-center justify-between">
+        <div className="uppercase  rounded-full text-center py-2 px-5 text-white text-lg w-full cursor-default bg-gradient-to-r from-pink-500 to-yellow-500 ">
+          TRANSFER
+        </div>
+        <div className="uppercase  rounded-full text-center py-2 px-5 text-white text-lg w-full cursor-default bg-gradient-to-r from-pink-500 to-yellow-500 ">
+          WITHDRAW
+        </div>
+      </div>
     </div>
   );
 };
