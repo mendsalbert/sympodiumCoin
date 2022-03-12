@@ -22,7 +22,14 @@ const Blocks = (props: Props) => {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4  my-12 gap-4 lg:gap-8">
-          <div className="rounded-tr-md rounded-tl-md "></div>
+          <div className="rounded-tr-lg bg-white rounded-tl-lg ">
+            <div>
+              <img src="/images/0x0.png" className="w-full" />
+            </div>
+            <div>
+              <p>ffs</p>
+            </div>
+          </div>
         </div>
         <div>
           <div className="max-w-8xl mx-auto container py-10">
