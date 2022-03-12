@@ -78,7 +78,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                     <p
                       className={
                         router.pathname === "/"
-                          ? "cursor-pointer font-bold"
+                          ? "cursor-pointer font-bold border-b-2 border-green-400"
                           : "cursor-pointer"
                       }
                     >
@@ -86,13 +86,37 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                     </p>
                   </Link>
                   <Link href="/blocks">
-                    <p className="cursor-pointer">Blockchain</p>
+                    <p
+                      className={
+                        router.pathname === "/blocks"
+                          ? "cursor-pointer font-bold border-b-2 border-green-400"
+                          : "cursor-pointer"
+                      }
+                    >
+                      Blockchain
+                    </p>
                   </Link>
                   <Link href="/wallet">
-                    <p className="cursor-pointer">Wallet</p>
+                    <p
+                      className={
+                        router.pathname === "/wallet"
+                          ? "cursor-pointer font-bold border-b-2 border-green-400"
+                          : "cursor-pointer"
+                      }
+                    >
+                      Wallet
+                    </p>
                   </Link>
                   <Link href="/nft">
-                    <p className="cursor-pointer">NFT</p>
+                    <p
+                      className={
+                        router.pathname === "/nft"
+                          ? "cursor-pointer font-bold border-b-2 border-green-400"
+                          : "cursor-pointer"
+                      }
+                    >
+                      NFT
+                    </p>
                   </Link>
                   {/* <p>NFT</p> */}
                 </div>
