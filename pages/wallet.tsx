@@ -15,11 +15,20 @@ const Wallet = (props: Props) => {
   const [address, setAddress] = useState("");
   const [balance, setBalance] = useState("");
 
+  const truncateString = (str, num) => {
+    if (str.length <= num) {
+      return str;
+    }
+    return str.slice(0, num) + "...";
+  };
+
   useEffect(() => {
     axios
       .get("http://localhost:3002/api/wallet-info")
       .then((res) => {
-        console.log(res.data);
+        let response = res.data;
+        setAddress(response.address);
+        setBalance(response.balance);
       })
       .catch((e) => {
         console.log(e);
@@ -39,10 +48,12 @@ const Wallet = (props: Props) => {
             </div>
             <div className="flex flex-row justify-between items-center space-y-4">
               <div className="sm:w-6/12">
-                <p className="text-md lg:text-xl">0aB3 XXXX XXXX XXXX XXXX</p>
+                <p className="text-md lg:text-xl">
+                  {truncateString(address, 20)}
+                </p>
                 <p className="text-md lg:text-xl">MENDS ALBERT</p>
               </div>
-              <p className="text-xl lg:text-3xl ">1000SC </p>
+              <p className="text-xl lg:text-3xl ">{balance}SC </p>
             </div>
           </div>
           <div className=" flex space-x-0 space-y-4 md:space-x-3 md:space-y-0 lg:space-y-0 lg:space-x-5 my-5 flex-col w-full md:flex-row lg:flex-row items-center justify-between">
