@@ -7,8 +7,9 @@ import {
   CubeIcon,
   CreditCardIcon,
   PhotographIcon,
+  HomeIcon,
 } from "@heroicons/react/outline";
-import { Menu } from "react-ionicons";
+import { useRouter } from "next/router";
 import Link from "next/link";
 type Props = {
   children?: ReactNode;
@@ -19,7 +20,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
   const toggleRef = useRef(null);
   const htmlRef = useRef(null);
   const [toggle, setToggle] = useState(false);
-
+  const router = useRouter();
   const openMenu = () => {
     toggleRef.current.style.width = "90%";
   };
@@ -69,15 +70,31 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
           <header>
             <nav className="hidden lg:flex flex-row items-center  justify-between pt-16">
               <div className="flex flex-row items-center space-x-4">
-                <img src="/images/logo.png" className="w-14" />
+                <Link href="/">
+                  <img src="/images/logo.png" className={"w-14"} />
+                </Link>
                 <div className="flex flex-row items-center text-white space-x-5">
+                  <Link href="/">
+                    <p
+                      className={
+                        router.pathname === "/"
+                          ? "cursor-pointer font-bold"
+                          : "cursor-pointer"
+                      }
+                    >
+                      Home
+                    </p>
+                  </Link>
                   <Link href="/blocks">
-                    <p>Blockchain</p>
+                    <p className="cursor-pointer">Blockchain</p>
                   </Link>
                   <Link href="/wallet">
-                    <p>Wallet</p>
+                    <p className="cursor-pointer">Wallet</p>
                   </Link>
-                  <p>NFT</p>
+                  <Link href="/nft">
+                    <p className="cursor-pointer">NFT</p>
+                  </Link>
+                  {/* <p>NFT</p> */}
                 </div>
               </div>
               <div className="flex flex-row items-center space-x-4">
@@ -129,21 +146,32 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
 
                     <div className="my-12 space-y-6">
                       <div className="flex flex-row items-center cursor-pointer space-x-3 ">
+                        <HomeIcon className="h-9 text-white" />
+
+                        <Link href="/">
+                          <p className="text-white">Home</p>
+                        </Link>
+                      </div>
+                      <div className="flex flex-row items-center cursor-pointer space-x-3 ">
                         <CubeIcon className="h-9 text-white" />
 
-                        <p className="text-white">Blockchians</p>
+                        <Link href="/blocks">
+                          <p className="text-white">Blockchians</p>
+                        </Link>
                       </div>
 
                       <div className="flex flex-row items-center cursor-pointer space-x-3">
                         <CreditCardIcon className="h-9 text-white" />
-
-                        <p className="text-white">Wallet</p>
+                        <Link href="/wallet">
+                          <p className="text-white">Wallet</p>
+                        </Link>
                       </div>
 
                       <div className="flex flex-row items-center cursor-pointer space-x-3">
                         <PhotographIcon className="h-9 text-white" />
-
-                        <p className="text-white">NFT's</p>
+                        <Link href="/nft">
+                          <p className="text-white">NFT's</p>
+                        </Link>
                       </div>
                       {/* <hr className="my-3" /> */}
                     </div>
