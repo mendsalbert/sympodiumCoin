@@ -10,7 +10,7 @@ type Props = {};
 
 const Wallet = (props: Props) => {
   return (
-    <div className="flex flex-row justify-between w-full items-start">
+    <div className="flex flex-row justify-between w-full items-start space-x-10">
       <div className=" my-14 w-full ">
         <div className=" text-black font-bold p-6 flex flex-col justify-between  relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 bg-gradient-to-r from-[#ffcc33] via-[#ffd700] to-[#e1ad21]  backdrop-filter: blur(20px)">
           <div className="flex flex-row items-center mb-5 lg:mb-14 justify-between ">
