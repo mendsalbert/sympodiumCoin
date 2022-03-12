@@ -15,7 +15,7 @@ const Blocks = (props: Props) => {
   return (
     <Layout>
       <div className="my-16">
-        <div className="  flex flex-col lg:flex-row items-center justify-center space-x-4">
+        <div className="  flex flex-col lg:flex-col items-center justify-center space-x-4">
           <img src="/images/nft.png" className="w-32" />
           <p className="font-extrabold flex flex-row space-x-2 text-center text-white text-5xl  lg:text-6xl ">
             NFT
