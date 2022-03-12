@@ -12,14 +12,14 @@ type Props = {};
 const Wallet = (props: Props) => {
   return (
     <Layout complete={true}>
-      <div className=" relative flex flex-col lg:flex-col justify-between w-full items-start lg:space-x-0">
+      <div className="  flex flex-col lg:flex-col justify-between w-full items-start lg:space-x-0">
         <div
-          className="py-12 bg-gray-700 transition duration-150 ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0"
+          className="py-12 bg-[#0000009f] w-full h-screen transition duration-150 ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0"
           id="modal"
         >
           <div
             role="alert"
-            className="container mx-auto w-11/12 md:w-2/3 max-w-lg"
+            className="container mx-auto w-11/12 md:w-2/3 max-w-lg "
           >
             <div className="relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
               <div className="w-full flex justify-start text-gray-600 mb-3">
@@ -32,12 +32,6 @@ const Wallet = (props: Props) => {
                 Enter Billing Details
               </h1>
 
-              <input
-                id="name"
-                className="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
-                placeholder="James"
-              />
-
               <div className="relative mb-5 mt-2">
                 <div className="absolute text-gray-600 flex items-center px-4 border-r h-full">
                   <img
@@ -46,44 +40,23 @@ const Wallet = (props: Props) => {
                   />
                 </div>
                 <input
-                  id="email2"
+                  type="text"
                   className="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-16 text-sm border-gray-300 rounded border"
-                  placeholder="XXXX - XXXX - XXXX - XXXX"
+                  placeholder="0xab xxxx xxxx xxxx xxxx"
                 />
               </div>
+              <input
+                id="name"
+                type="number"
+                className="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
+                placeholder="Amount"
+              />
 
-              <div className="relative mb-5 mt-2">
-                <div className="absolute right-0 text-gray-600 flex items-center pr-3 h-full cursor-pointer">
-                  <img
-                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left_aligned_form-svg3.svg"
-                    alt="icon"
-                  />
-                </div>
-                <input
-                  id="expiry"
-                  className="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
-                  placeholder="MM/YY"
-                />
-              </div>
-
-              <div className="relative mb-5 mt-2">
-                <div className="absolute right-0 text-gray-600 flex items-center pr-3 h-full cursor-pointer">
-                  <img
-                    src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left_aligned_form-svg4.svg"
-                    alt="icon"
-                  />
-                </div>
-                <input
-                  id="cvc"
-                  className="mb-8 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
-                  placeholder="MM/YY"
-                />
-              </div>
               <div className="flex items-center justify-start w-full">
-                <button className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-8 py-2 text-sm">
+                <button className="w-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-8 py-2 text-sm">
                   Submit
                 </button>
-                <button className="focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-gray-400 ml-3 bg-gray-100 transition duration-150 text-gray-600 ease-in-out hover:border-gray-400 hover:bg-gray-300 border rounded px-8 py-2 text-sm">
+                <button className=" w-full focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-gray-400 ml-3 bg-gray-100 transition duration-150 text-gray-600 ease-in-out hover:border-gray-400 hover:bg-gray-300 border rounded px-8 py-2 text-sm">
                   Cancel
                 </button>
               </div>

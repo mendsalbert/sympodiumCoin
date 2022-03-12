@@ -68,7 +68,7 @@ const Layout = ({
       // animate={{ opacity: 1 }}
       // transition={{ delay: 0.1 }}
       >
-        <div className="font-Montserrat px-4  md:px-20  lg:px-48 dark:bg-main-background-dark bg-main-background bg-cover overflow-x-hidden  bg-no-repeat  bg-center h-screen">
+        <div className="font-Montserrat px-4 relative md:px-20  lg:px-48 dark:bg-main-background-dark bg-main-background bg-cover overflow-x-hidden  bg-no-repeat  bg-center h-screen">
           <Head>
             <title>{title}</title>
           </Head>
