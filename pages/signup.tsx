@@ -7,6 +7,10 @@ const Signup = (props: Props) => {
   return (
     <Layout complete={false}>
       <div className="w-full h-screen  flex flex-col justify-center items-center ">
+        <div>
+          <img className="w-20" src="/images/logo.png" />
+        </div>
+        <p className="text-white text-xl pb-5 font-bold">Sympodium</p>
         <div className="w-6/12 space-y-6 text-white font-bold p-6 flex flex-col justify-between  relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-md backdrop-filter: blur(20px)">
           <div>
             <input
