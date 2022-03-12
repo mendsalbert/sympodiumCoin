@@ -29,30 +29,29 @@ const Wallet = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="my-14 text-white w-full  text-left ">
+      <div className="my-14 text-white w-full   ">
         <p>Transactions (2)</p>
 
         <div className="w-full">
-          <div className="h-80 py-8">
-            <div className="mx-auto flex justify-center sm:justify-end h-full">
-              <div
-                role="alert"
-                className="sm:mr-6 xl:w-5/12 mx-auto absolute left-0 sm:left-auto right-0 sm:w-6/12 md:w-3/5 justify-between w-11/12 bg-white dark:bg-gray-800 shadow-lg rounded flex sm:flex-row flex-col transition duration-150 ease-in-out"
-                id="notification"
-              >
-                <div className="sm:px-6 p-2 flex mt-4 sm:mt-0 ml-4 sm:ml-0 items-center justify-center bg-green-700 sm:rounded-tl sm:rounded-bl w-12 h-12 sm:h-auto sm:w-auto text-white">
-                  <TicketIcon className="h-7 text-white" />
-                </div>
-                <div className="flex flex-col justify-center xl:-ml-4 pl-4 xl:pl-1 sm:w-3/5 pt-4 sm:pb-4 pb-2">
-                  <h1 className="text-lg text-gray-800 dark:text-gray-100 font-semibold pb-1">
-                    Action Completed
-                  </h1>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 font-normal">
-                    You have successfully completed the survey. You will soon
-                    receive a reward email. Stay tuned.
-                  </p>
-                </div>
-              </div>
+          <div className="w-full p-3 mt-8 bg-white rounded flex">
+            <div
+              aria-label="heart icon"
+              role="img"
+              className="focus:outline-none w-8 h-8 border rounded-full border-gray-200 flex items-center justify-center"
+            >
+              <img
+                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/notification_1-svg2.svg"
+                alt="icon"
+              />
+            </div>
+            <div className="pl-3">
+              <p className="focus:outline-none text-sm leading-none">
+                <span className="text-indigo-700">James Doe</span> favourited an{" "}
+                <span className="text-indigo-700">item</span>
+              </p>
+              <p className="focus:outline-none text-xs leading-3 pt-1 text-gray-500">
+                2 hours ago
+              </p>
             </div>
           </div>
         </div>
