@@ -1,4 +1,6 @@
 import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
   ClockIcon,
   CreditCardIcon,
   CubeTransparentIcon,
@@ -119,6 +121,43 @@ const Blocks = (props: Props) => {
             <CubeTransparentIcon className="h-9 text-white" />
             <p className="text-white">Hash</p>
           </div>
+        </div>
+      </div>
+      <div>
+        <div className="max-w-8xl mx-auto container py-10">
+          <ul className="flex justify-center items-center">
+            <li>
+              <ChevronLeftIcon className="h-6 text-white" />
+            </li>
+            <li>
+              <span className=" focus:bg-indigo-700 focus:text-white flex text-indigo-700 bg-white hover:bg-indigo-600 hover:text-white text-base leading-tight font-bold cursor-pointer shadow transition duration-150 ease-in-out mx-2 sm:mx-4 rounded px-3 py-2 ">
+                1
+              </span>
+            </li>
+            <li>
+              <span className=" focus:bg-indigo-700 focus:text-white flex text-indigo-700 bg-white hover:bg-indigo-600 hover:text-white text-base leading-tight font-bold cursor-pointer shadow transition duration-150 ease-in-out mx-2 sm:mx-4 rounded px-3 py-2 ">
+                2
+              </span>
+            </li>
+            <li>
+              <span className=" focus:bg-indigo-700 focus:text-white flex text-indigo-700 bg-white hover:bg-indigo-600 hover:text-white rounded transition duration-150 ease-in-out text-base leading-tight font-bold shadow px-3 py-2 ">
+                ...
+              </span>
+            </li>
+            <li>
+              <span className=" focus:bg-indigo-700 focus:text-white flex text-indigo-700 bg-white hover:bg-indigo-600 hover:text-white text-base leading-tight font-bold cursor-pointer transition shadow duration-150 ease-in-out mx-2 sm:mx-4 rounded px-3 py-2 ">
+                6
+              </span>
+            </li>
+            <li>
+              <span className=" focus:bg-indigo-700 focus:text-white flex text-indigo-700 bg-white hover:bg-indigo-600 hover:text-white text-base leading-tight font-bold cursor-pointer transition shadow duration-150 ease-in-out mx-2 sm:mx-4 rounded px-3 py-2 focus:outline-none">
+                7
+              </span>
+            </li>
+            <li>
+              <ChevronRightIcon className="h-7 text-white" />
+            </li>
+          </ul>
         </div>
       </div>
     </div>
