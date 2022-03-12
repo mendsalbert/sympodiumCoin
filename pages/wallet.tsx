@@ -38,18 +38,20 @@ const Wallet = (props: Props) => {
         <p className="text-2xl mb-4">Transactions (2)</p>
 
         <div className="w-full">
-          <div className="w-full p-3  bg-white rounded flex">
+          <div className="w-full p-2 bg-white dark:bg-gray-600 rounded flex">
             {/* <TicketIcon className="h-8 text-gray-700" /> */}
-            <div className="pl-3 space-y-1">
-              <p className="focus:outline-none text-md flex flex-row items-center space-x-3 leading-3 pt-1 text-gray-500">
-                <UserIcon className="h-6 text-gray-700" />
+            <div className="pl-3  space-y-0">
+              <p className="dark:text-gray-300 focus:outline-none text-md flex flex-row items-center space-x-3 leading-3 pt-1 text-gray-500">
+                <UserIcon className="h-6 text-gray-700 dark:text-gray-400" />
                 0x5ffafd54fadf56afeh65665
               </p>
-              <p className="focus:outline-none text-md flex flex-row items-center space-x-3 leading-3 pt-1 text-gray-500">
-                <CashIcon className="h-6 text-gray-700" /> 50 SC
+              <p className="dark:text-gray-300 focus:outline-none text-md flex flex-row items-center space-x-3 leading-3 pt-1 text-gray-500">
+                <CashIcon className="h-6 text-gray-700 dark:text-gray-400" /> 50
+                SC
               </p>
-              <p className="focus:outline-none text-md flex flex-row items-center space-x-3 leading-3 pt-1 text-gray-500">
-                <ClockIcon className="h-6 text-gray-700" /> Date
+              <p className="dark:text-gray-300 focus:outline-none text-md flex flex-row items-center space-x-3 leading-3 pt-1 text-gray-500">
+                <ClockIcon className="h-6 text-gray-700 dark:text-gray-400" />
+                Date
               </p>
             </div>
           </div>
