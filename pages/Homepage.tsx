@@ -66,7 +66,7 @@ const Homepage = (props: Props) => {
             </div>
           </div>
 
-          <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606d0] to-[#5100ffcb] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
+          <div className=" text-center text-white font-bold p-6 flex flex-col justify-between  relative bg-gradient-to-r from-[#ff0606da] to-[#5100ffde] shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl  backdrop-filter: blur(20px)">
             <div className="text-center  mb-7 justify-between ">
               <p className="uppercase text-5xl font-bold py-4">
                 {viewPortEntered ? (
