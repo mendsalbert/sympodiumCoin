@@ -4,13 +4,28 @@ import {
   TicketIcon,
   UserIcon,
 } from "@heroicons/react/outline";
-import React from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Modal from "../components/organisms/Modal";
 
 type Props = {};
 
 const Wallet = (props: Props) => {
+  const [address, setAddress] = useState("");
+  const [balance, setBalance] = useState("");
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3002/api/wallet-info")
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
+
   return (
     <Layout complete={true}>
       <div className="  flex flex-col lg:flex-col justify-between w-full items-start lg:space-x-0">
