@@ -16,7 +16,7 @@ const IndexPage = () => {
     return <LoadingPage />;
   } else {
     return (
-      <Layout title="sympodium coin">
+      <Layout title="sympodium coin" complete={true}>
         <Homepage />
       </Layout>
     );

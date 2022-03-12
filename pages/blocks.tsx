@@ -13,7 +13,7 @@ type Props = {};
 
 const Blocks = (props: Props) => {
   return (
-    <Layout>
+    <Layout complete={true}>
       <div className="my-16">
         <div className="  flex flex-col lg:flex-row items-center justify-center space-x-4">
           <p className="font-extrabold flex flex-row space-x-2 text-center text-white text-5xl  lg:text-6xl ">

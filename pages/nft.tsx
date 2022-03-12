@@ -13,7 +13,7 @@ type Props = {};
 
 const Blocks = (props: Props) => {
   return (
-    <Layout>
+    <Layout complete={true}>
       <div className="my-16">
         <div className="flex flex-col lg:flex-col items-center justify-center space-x-4">
           <img src="/images/nft.png" className="w-24" />
