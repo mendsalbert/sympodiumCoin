@@ -1,5 +1,6 @@
 import {
   CashIcon,
+  ClipboardCopyIcon,
   ClockIcon,
   TicketIcon,
   UserIcon,
@@ -48,9 +49,14 @@ const Wallet = (props: Props) => {
             </div>
             <div className="flex flex-row justify-between items-center space-y-4">
               <div className="sm:w-6/12">
-                <p className="text-md lg:text-xl">
-                  {truncateString(address, 20)}
-                </p>
+                <div className="flex flex-row items-center ">
+                  <p>
+                    <ClipboardCopyIcon className="text-black cursor-pointer h-6" />
+                  </p>
+                  <p className="text-md lg:text-xl">
+                    {truncateString(address, 20)}
+                  </p>
+                </div>
                 <p className="text-md lg:text-xl">MENDS ALBERT</p>
               </div>
               <p className="text-xl lg:text-3xl ">{balance}SC </p>
