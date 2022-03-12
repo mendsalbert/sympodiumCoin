@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 type Props = {
   onCloseModal: Function;
 };
 
 const Modal = (props: Props) => {
+  const [address, setAddress] = useState("");
+  const [amount, setAmount] = useState("");
   return (
     <div>
       <div
@@ -34,6 +36,10 @@ const Modal = (props: Props) => {
                 />
               </div>
               <input
+                value={address}
+                onChange={(e) => {
+                  setAddress(e.target.value);
+                }}
                 type="text"
                 className="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-16 text-sm border-gray-300 rounded border"
                 placeholder="0xab xxxx xxxx xxxx xxxx"
@@ -41,6 +47,10 @@ const Modal = (props: Props) => {
             </div>
             <input
               id="name"
+              value={amount}
+              onChange={(e) => {
+                setAmount(e.target.value);
+              }}
               type="number"
               className="mb-5 mt-2 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
               placeholder="Amount"
