@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import CountUp from "react-countup";
 import { Waypoint } from "react-waypoint";
-
+import Link from "next/link";
 type Props = {};
 
 const Homepage = (props: Props) => {
@@ -22,7 +22,7 @@ const Homepage = (props: Props) => {
             WeCoin 3. World Frist Community Based Cryptocurrency.
           </p>
           <div className="rounded-full text-center py-2 px-5 text-lg w-6/12 cursor-default bg-gradient-to-r from-pink-500 to-yellow-500 ">
-            Get Started
+            <Link href="/signup">Get Started</Link>
           </div>
         </div>
         <div className="animate-pulse text-white font-bold p-6 flex flex-col justify-between w-full lg:w-7/12 relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">

@@ -45,6 +45,12 @@ const Signup = (props: Props) => {
             SIGN UP
           </div>
         </div>
+        <p className="text-white text-lg  pt-5">
+          Already signed up ?{" "}
+          <a href="/signin" className="underline text-blue-200">
+            Login
+          </a>
+        </p>
       </div>
     </Layout>
   );
