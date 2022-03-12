@@ -1,3 +1,4 @@
+import { TicketIcon } from "@heroicons/react/outline";
 import React from "react";
 
 type Props = {};
@@ -33,10 +34,13 @@ const Wallet = (props: Props) => {
 
         <div className="w-full">
           <div className="flex flex-row space-x-6 ">
-            <div className="bg-white rounded-md"></div>
+            <div className="bg-white rounded-md p-2">
+              <TicketIcon className="h-7 text-black" />
+            </div>
             <div>
               <p>To: </p>
               <p>Amout:</p>
+              <p>Date:</p>
             </div>
           </div>
         </div>
