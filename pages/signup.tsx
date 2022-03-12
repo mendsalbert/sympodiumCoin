@@ -37,6 +37,9 @@ const Signup = (props: Props) => {
               placeholder="confirm password "
             />
           </div>
+          <div className="uppercase  rounded-xl text-center py-2 px-5 text-white text-lg w-full cursor-pointer bg-gradient-to-r from-pink-500 to-yellow-500 ">
+            SIGN UP
+          </div>
         </div>
       </div>
     </Layout>
