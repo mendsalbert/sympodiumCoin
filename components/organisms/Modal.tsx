@@ -6,7 +6,7 @@ const Modal = (props: Props) => {
   return (
     <div>
       <div
-        className="py-12 bg-[#0000009f] w-full h-32-full transition duration-150 ease-in-out z-50 absolute top-0 right-0 bottom-0 left-0"
+        className="py-12 bg-[#0000009f] w-full  transition duration-150 ease-in-out z-50 absolute top-0 right-0 bottom-0 left-0"
         id="modal"
       >
         <div
