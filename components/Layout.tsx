@@ -9,6 +9,7 @@ import {
   PhotographIcon,
 } from "@heroicons/react/outline";
 import { Menu } from "react-ionicons";
+import Link from "next/link";
 type Props = {
   children?: ReactNode;
   title?: string;
@@ -70,8 +71,12 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
               <div className="flex flex-row items-center space-x-4">
                 <img src="/images/logo.png" className="w-14" />
                 <div className="flex flex-row items-center text-white space-x-5">
-                  <p>Blockchain</p>
-                  <p>Wallet</p>
+                  <Link href="/blocks">
+                    <p>Blockchain</p>
+                  </Link>
+                  <Link href="/wallet">
+                    <p>Wallet</p>
+                  </Link>
                   <p>NFT</p>
                 </div>
               </div>
