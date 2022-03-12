@@ -23,12 +23,15 @@ const Blocks = (props: Props) => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-3  my-12 gap-4 lg:gap-8">
           <div className="rounded-tr-xl  bg-white rounded-tl-xl ">
-            <div>
+            {/* <div className="">
               <img
                 src="/images/0x0.png"
-                className="w-full rounded-bl-none rounded-br-none h-3/5"
+                className="object-cover rounded-bl-none rounded-br-none "
               />
-            </div>
+            </div> */}
+            <div className="bg-yellow-300">
+  <img className="object-none h-48 w-96" src="/images/0x0.png"/>
+</div>
             <div className="p-2">
               <p className="text-xl font-bold text-black">Cat</p>
               <p className="text-lg  text-gray-700">Some short dec</p>
