@@ -133,9 +133,11 @@ const Layout = ({
                 </div>
               </div>
               <div className="flex flex-row items-center space-x-4">
-                <p className="text-white">Login</p>
-                <div className="bg-[#5F6FFB] py-2 px-4 text-white rounded-md text-center">
-                  Sign Up
+                <p className="cursor-pointer text-white">
+                  <Link href="/signin">Login</Link>
+                </p>
+                <div className="cursor-pointer bg-[#5F6FFB] py-2 px-4 text-white rounded-md text-center">
+                  <Link href="/signup">Sign Up</Link>
                 </div>
                 <div
                   onClick={() => {
@@ -177,10 +179,10 @@ const Layout = ({
                       <div className="pt-10 my-3 space-y-5">
                         {/* <p className="text-white">Login</p> */}
                         <div className=" py-2 px-4 text-white border-2 border-white rounded-md text-center">
-                          Log In
+                          <Link href="/login">Log In</Link>
                         </div>
                         <div className="bg-blue-800 py-2 px-4 text-white rounded-md text-center">
-                          Sign Up
+                          <Link href="/signup">Sign Up</Link>
                         </div>
                       </div>
                     </div>
