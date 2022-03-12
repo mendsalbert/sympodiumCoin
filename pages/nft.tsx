@@ -15,14 +15,14 @@ const Blocks = (props: Props) => {
   return (
     <Layout>
       <div className="my-16">
-        <div className="  flex flex-col lg:flex-col items-center justify-center space-x-4">
+        <div className="flex flex-col lg:flex-col items-center justify-center space-x-4">
           <img src="/images/nft.png" className="w-32" />
           <p className="font-extrabold flex flex-row space-x-2 text-center text-white text-5xl  lg:text-6xl ">
             NFT
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4  my-12 gap-4 lg:gap-8">
-          <div className="rounded-tr-xl bg-white rounded-tl-xl ">
+        <div className="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-3  my-12 gap-4 lg:gap-8">
+          <div className="rounded-tr-xl  bg-white rounded-tl-xl ">
             <div>
               <img
                 src="/images/0x0.png"
@@ -33,7 +33,14 @@ const Blocks = (props: Props) => {
               <p className="text-xl font-bold text-black">Cat</p>
               <p className="text-lg  text-gray-700">Some short dec</p>
               <p className="text-lg font-bold text-red-600">0.01ETH</p>
-              <div></div>
+              <div className=" flex space-x-2 my-1 flex-row items-center justify-between">
+                <div className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] ">
+                  MINT
+                </div>
+                <div className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg w-full  bg-gradient-to-r from-[#FF1E1E] to-[#5200FF] ">
+                  TRANSFER
+                </div>
+              </div>
             </div>
           </div>
         </div>
