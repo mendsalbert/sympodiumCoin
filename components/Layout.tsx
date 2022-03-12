@@ -14,9 +14,14 @@ import Link from "next/link";
 type Props = {
   children?: ReactNode;
   title?: string;
+  complete: boolean;
 };
 
-const Layout = ({ children, title = "This is the default title" }: Props) => {
+const Layout = ({
+  children,
+  title = "This is the default title",
+  complete,
+}: Props) => {
   const toggleRef = useRef(null);
   const htmlRef = useRef(null);
   const [toggle, setToggle] = useState(false);
@@ -68,7 +73,13 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
             <title>{title}</title>
           </Head>
           <header>
-            <nav className="hidden lg:flex flex-row items-center  justify-between pt-16">
+            <nav
+              className={
+                complete
+                  ? "hidden lg:flex flex-row items-center  justify-between pt-16"
+                  : "hidden"
+              }
+            >
               <div className="flex flex-row items-center space-x-4">
                 <Link href="/">
                   <img src="/images/logo.png" className={"w-14"} />
@@ -142,7 +153,13 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
               </div>
             </nav>
 
-            <nav className=" relative lg:hidden flex flex-row items-center  justify-between pt-6  ">
+            <nav
+              className={
+                complete
+                  ? "relative lg:hidden flex flex-row items-center  justify-between pt-6"
+                  : "hidden"
+              }
+            >
               <div
                 ref={toggleRef}
                 className="w-0 transition-width duration-200 delay-75 ease-in-out bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] dark:bg-gradient-to-r dark:from-[#021622] dark:to-[#011627]  lg:hidden overflow-auto h-full fixed shadow-2xl top-0 left-0 z-50"
@@ -259,7 +276,13 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
             </nav>
           </header>
           {children}
-          <footer className="py-4 flex-col items-center space-y-4 text-center">
+          <footer
+            className={
+              complete
+                ? "py-4 flex-col items-center space-y-4 text-center"
+                : "hidden"
+            }
+          >
             <div className="flex flex-row space-x-4 justify-center items-center cursor-pointer">
               <img src="/images/twitter.png" className="lg:w-9 w-7" />
               <img src="/images/discord.png" className="lg:w-9 w-7" />
