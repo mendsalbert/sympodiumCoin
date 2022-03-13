@@ -38,36 +38,18 @@ const Wallet = (props: Props) => {
   };
 
   const tifOptions = Object.keys(outputObject).map((key) => (
-    <option value={key}>{outputObject[key]}</option>
+    <div className="w-full p-2 bg-white dark:bg-gray-600 rounded flex">
+      <div className="pl-3  space-y-0">
+        <p className="dark:text-gray-300 focus:outline-none text-md flex flex-row items-center  leading-3 pt-1 text-gray-500">
+          <UserIcon className="h-6 text-gray-700 dark:text-gray-400  pr-3" />
+          {key}
+        </p>
+        <div>
+          <p>{outputObject[key]}</p>
+        </div>
+      </div>
+    </div>
   ));
-
-  console.log(tifOptions);
-  const outputMap = (obj: any) => {
-    const entries = Object.entries(obj);
-
-    // console.log(entries);
-
-    // for (const property in obj) {
-    //   console.log(property, obj[property]);
-    // return (
-
-    //   <div className="w-full p-2 bg-white dark:bg-gray-600 rounded flex">
-    //     <div className="pl-3  space-y-0">
-    //       <p className="dark:text-gray-300 focus:outline-none text-md flex flex-row items-center  leading-3 pt-1 text-gray-500">
-    //         <UserIcon className="h-6 text-gray-700 dark:text-gray-400  pr-3" />
-    //         {property}
-    //       </p>
-    //       <div>
-    //         <p>{obj[property]}</p>
-    //       </div>
-    //     </div>
-    //   </div>;
-    //   );
-    // }
-  };
-
-  //   outputMap(outputObject);
-  //   console.log(setOutputObj);
 
   useEffect(() => {
     axios
@@ -90,15 +72,6 @@ const Wallet = (props: Props) => {
         Object.values(transactionPool.transactionPoll).map(
           (transaction: any) => {
             setOutputObject(transaction.outputMap);
-            //   outputMap(transaction.outputMap)
-
-            // for (const property in transaction.outputMap) {
-            //   outputMap(property, transaction.outputMap[property]);
-            //   console.log(
-            //     `to: ${property}: sent: ${transaction.outputMap[property]}`
-            //   );
-            // }
-            // console.log(transaction);
           }
         );
       })
