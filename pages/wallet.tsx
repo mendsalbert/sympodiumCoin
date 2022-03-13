@@ -39,7 +39,7 @@ const Wallet = (props: Props) => {
 
   const mineTransactionHandler = () => {
     axios
-      .get("http://localhost:3002/api/mine-transaction")
+      .get("https://sympodiumcoin.herokuapp.com/api/mine-transaction")
       .then((res) => {
         let response = res.data;
         console.log(response);
@@ -65,7 +65,7 @@ const Wallet = (props: Props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3002/api/wallet-info")
+      .get("https://sympodiumcoin.herokuapp.com/api/wallet-info")
       .then((res) => {
         let response = res.data;
         setAddress(response.address);
@@ -76,7 +76,7 @@ const Wallet = (props: Props) => {
       });
 
     axios
-      .get("http://localhost:3002/api/transaction-poll")
+      .get("https://sympodiumcoin.herokuapp.com/api/transaction-poll")
       .then((res) => {
         let response = res.data;
         setTransactionPool(response);
