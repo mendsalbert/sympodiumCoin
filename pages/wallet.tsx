@@ -18,6 +18,8 @@ const Wallet = (props: Props) => {
   const [address, setAddress] = useState("");
   const [balance, setBalance] = useState("");
   const [modal, setModal] = useState(false);
+  const [transactionPool, setTransactionPool] = useState([]);
+
   const truncateString = (str, num) => {
     if (str.length <= num) {
       return str;
@@ -32,6 +34,16 @@ const Wallet = (props: Props) => {
         let response = res.data;
         setAddress(response.address);
         setBalance(response.balance);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+
+    axios
+      .get("http://localhost:3002/api/transaction-poll")
+      .then((res) => {
+        let response = res.data;
+        console.log(response);
       })
       .catch((e) => {
         console.log(e);
@@ -87,7 +99,7 @@ const Wallet = (props: Props) => {
           </div>
         </div>
         <div className="my-8  lg:my-14 text-white w-full">
-          <p className="text-2xl mb-4">Transactions (3)</p>
+          <p className="text-2xl mb-4">Transaction(s)</p>
 
           <div className="w-full space-y-4">
             <div className="w-full p-2 bg-white dark:bg-gray-600 rounded flex">
