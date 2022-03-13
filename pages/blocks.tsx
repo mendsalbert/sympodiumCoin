@@ -69,6 +69,23 @@ const Blocks = (props: Props) => {
                   {truncateString(chain.hash, 7)}
                 </p>
               </div>
+
+              <div className="flex flex-row items-center cursor-pointer space-x-3">
+                <CubeTransparentIcon className="h-9 text-white" />
+                <p className="text-white md:text-lg">
+                  {chain.data.map((transaction) => (
+                    <>
+                      <p>{transaction.id}</p>
+                      {Object.keys(transaction.outputMap).map((key) => (
+                        <>
+                          <p>{key}</p>
+                          <p>{transaction.outputMap[key]}</p>
+                        </>
+                      ))}
+                    </>
+                  ))}
+                </p>
+              </div>
             </div>
           ))}
         </div>

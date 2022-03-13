@@ -37,6 +37,18 @@ const Wallet = (props: Props) => {
     return str.slice(0, num) + "...";
   };
 
+  const mineTransactionHandler = () => {
+    axios
+      .get("http://localhost:3002/api/mine-transaction")
+      .then((res) => {
+        let response = res.data;
+        console.log(response);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
   const tifOptions = Object.keys(outputObject).map((key) => (
     <div className="w-full p-2 bg-white dark:bg-gray-600 rounded flex">
       <div className="pl-3  space-y-0">
@@ -123,7 +135,12 @@ const Wallet = (props: Props) => {
             >
               TRANSFER
             </div>
-            <div className="uppercase cursor-pointer text-md  rounded-md w-full text-center py-2 px-5 text-white lg:text-lg  lg:w-full  bg-gradient-to-r  from-[#FF1E1E] to-[#5200FF] ">
+            <div
+              onClick={() => {
+                mineTransactionHandler();
+              }}
+              className="uppercase cursor-pointer text-md  rounded-md w-full text-center py-2 px-5 text-white lg:text-lg  lg:w-full  bg-gradient-to-r  from-[#FF1E1E] to-[#5200FF] "
+            >
               WITHDRAW
             </div>
           </div>
