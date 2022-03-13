@@ -22,8 +22,11 @@ const Modal = (props: Props) => {
       )
       .then((res) => {
         console.log(res.data);
+        alert("Transaction Successfull");
+        props.onCloseModal();
       })
       .catch((e) => {
+        alert("Transaction Failure");
         console.log(e);
       });
   };

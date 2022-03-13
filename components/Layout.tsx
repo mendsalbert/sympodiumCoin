@@ -11,6 +11,7 @@ import {
 } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
 import Link from "next/link";
+// import { SnackbarProvider } from "react-snackbar-messages";
 type Props = {
   children?: ReactNode;
   title?: string;
