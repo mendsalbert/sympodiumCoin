@@ -37,10 +37,15 @@ const Wallet = (props: Props) => {
     return str.slice(0, num) + "...";
   };
 
+  const tifOptions = Object.keys(outputObject).map((key) => (
+    <option value={key}>{outputObject[key]}</option>
+  ));
+
+  console.log(tifOptions);
   const outputMap = (obj: any) => {
     const entries = Object.entries(obj);
 
-    console.log(entries);
+    // console.log(entries);
 
     // for (const property in obj) {
     //   console.log(property, obj[property]);
@@ -61,7 +66,8 @@ const Wallet = (props: Props) => {
     // }
   };
 
-  outputMap(outputObject);
+  //   outputMap(outputObject);
+  //   console.log(setOutputObj);
 
   useEffect(() => {
     axios
@@ -151,6 +157,7 @@ const Wallet = (props: Props) => {
         </div>
         <div className="my-8  lg:my-14 text-white w-full">
           <p className="text-2xl mb-4">Transaction(s)</p>
+          {tifOptions}
           {/* {outputMap(outputObject)} */}
           <div className="w-full space-y-4"></div>
         </div>
