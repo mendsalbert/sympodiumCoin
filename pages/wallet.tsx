@@ -26,7 +26,7 @@ const Wallet = (props: Props) => {
   const [balance, setBalance] = useState("");
   const [modal, setModal] = useState(false);
   const [transactionPool, setTransactionPool] = useState<TransactionPool>();
-
+  const [outputObject, setOutputObject] = useState({});
   //   console.log(transactionPool.transactionPoll);
 
   const truncateString = (str, num) => {
@@ -35,6 +35,14 @@ const Wallet = (props: Props) => {
     }
     return str.slice(0, num) + "...";
   };
+
+  const outputMap = (obj: any) => {
+    for (const property in obj) {
+      console.log(`to: ${property}: sent: ${obj[property]}`);
+    }
+  };
+
+  console.log(outputMap(outputObject));
 
   useEffect(() => {
     axios
@@ -56,13 +64,18 @@ const Wallet = (props: Props) => {
 
         Object.values(transactionPool.transactionPoll).map(
           (transaction: any) => {
-            Object.values(transaction.outputMap).map((output: any) => {
-              console.log(output);
-            });
-            console.log(transaction);
+            setOutputObject(transaction.outputMap);
+            //   outputMap(transaction.outputMap)
+
+            // for (const property in transaction.outputMap) {
+            //   outputMap(property, transaction.outputMap[property]);
+            //   console.log(
+            //     `to: ${property}: sent: ${transaction.outputMap[property]}`
+            //   );
+            // }
+            // console.log(transaction);
           }
         );
-        // console.log(response);
       })
       .catch((e) => {
         console.log(e);
