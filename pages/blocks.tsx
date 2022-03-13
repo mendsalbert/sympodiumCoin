@@ -75,18 +75,18 @@ const Blocks = (props: Props) => {
                   </div>
 
                   <div className="flex flex-row items-center cursor-pointer space-x-3">
-                    <CubeTransparentIcon className="h-9 text-white" />
+                    <CreditCardIcon className="h-9 text-white" />
                     <p className="text-white md:text-lg">
                       {chain.data.map((transaction) => (
-                        <>
-                          <p>{transaction.id}</p>
+                        <div className="">
                           {Object.keys(transaction.outputMap).map((key) => (
-                            <>
-                              <p>{key}</p>
-                              <p>{transaction.outputMap[key]}</p>
-                            </>
+                            <div className="flex flex-row space-x-3">
+                              <p>To: {truncateString(key, 8)}</p>
+
+                              <p>Sent: {transaction.outputMap[key]}</p>
+                            </div>
                           ))}
-                        </>
+                        </div>
                       ))}
                     </p>
                   </div>
