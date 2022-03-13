@@ -14,11 +14,16 @@ type Props = {
   onCloseModal: void;
 };
 
+interface TransactionPool {
+  id: string;
+  input: {};
+  outputMap: any;
+}
 const Wallet = (props: Props) => {
   const [address, setAddress] = useState("");
   const [balance, setBalance] = useState("");
   const [modal, setModal] = useState(false);
-  const [transactionPool, setTransactionPool] = useState([]);
+  const [transactionPool, setTransactionPool] = useState<any>();
 
   const truncateString = (str, num) => {
     if (str.length <= num) {
@@ -27,6 +32,7 @@ const Wallet = (props: Props) => {
     return str.slice(0, num) + "...";
   };
 
+  console.log(transactionPool);
   useEffect(() => {
     axios
       .get("http://localhost:3002/api/wallet-info")
@@ -43,7 +49,8 @@ const Wallet = (props: Props) => {
       .get("http://localhost:3002/api/transaction-poll")
       .then((res) => {
         let response = res.data;
-        console.log(response);
+        // console.log(response);
+        setTransactionPool(response.transactionPool);
       })
       .catch((e) => {
         console.log(e);
@@ -102,6 +109,9 @@ const Wallet = (props: Props) => {
           <p className="text-2xl mb-4">Transaction(s)</p>
 
           <div className="w-full space-y-4">
+            {Object.keys(transactionPool.outputMap).forEach(function (key) {
+              console.log(key);
+            })}
             <div className="w-full p-2 bg-white dark:bg-gray-600 rounded flex">
               {/* <TicketIcon className="h-8 text-gray-700" /> */}
               <div className="pl-3  space-y-0">
@@ -116,42 +126,6 @@ const Wallet = (props: Props) => {
                 <p className="dark:text-gray-300 focus:outline-none text-md flex flex-row items-center  leading-3 pt-1 text-gray-500">
                   <ClockIcon className="h-6 text-gray-700 dark:text-gray-400  pr-3" />
                   Date
-                </p>
-              </div>
-            </div>
-            <div className="w-full p-2 bg-white dark:bg-gray-600 rounded flex">
-              {/* <TicketIcon className="h-8 text-gray-700" /> */}
-              <div className="pl-3  space-y-0">
-                <p className="dark:text-gray-300  focus:outline-none text-md flex flex-row items-center  leading-3 pt-1 text-gray-500">
-                  <UserIcon className="h-6 text-gray-700 dark:text-gray-400 pr-3" />
-                  <span>0x5ffafd54fadf56afeh65665</span>
-                </p>
-                <p className="dark:text-gray-300 focus:outline-none text-md flex flex-row items-center  leading-3 pt-1 text-gray-500">
-                  <CashIcon className="h-6 text-gray-700 dark:text-gray-400 pr-3" />{" "}
-                  <span>50 SC</span>
-                </p>
-                <p className="dark:text-gray-300 focus:outline-none text-md flex flex-row items-center  leading-3 pt-1 text-gray-500">
-                  <ClockIcon className="h-6 text-gray-700 dark:text-gray-400 pr-3" />
-
-                  <span>Date</span>
-                </p>
-              </div>
-            </div>
-            <div className="w-full p-2 bg-white dark:bg-gray-600 rounded flex">
-              {/* <TicketIcon className="h-8 text-gray-700" /> */}
-              <div className="pl-3  space-y-0">
-                <p className="dark:text-gray-300  focus:outline-none text-md flex flex-row items-center  leading-3 pt-1 text-gray-500">
-                  <UserIcon className="h-6 text-gray-700 dark:text-gray-400 pr-3" />
-                  <span>0x5ffafd54fadf56afeh65665</span>
-                </p>
-                <p className="dark:text-gray-300 focus:outline-none text-md flex flex-row items-center  leading-3 pt-1 text-gray-500">
-                  <CashIcon className="h-6 text-gray-700 dark:text-gray-400 pr-3" />{" "}
-                  <span>50 SC</span>
-                </p>
-                <p className="dark:text-gray-300 focus:outline-none text-md flex flex-row items-center  leading-3 pt-1 text-gray-500">
-                  <ClockIcon className="h-6 text-gray-700 dark:text-gray-400 pr-3" />
-
-                  <span>Date</span>
                 </p>
               </div>
             </div>
