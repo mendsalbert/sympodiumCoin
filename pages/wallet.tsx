@@ -38,7 +38,10 @@ const Wallet = (props: Props) => {
   };
 
   const outputMap = (obj: any) => {
-    outputObj.push[obj];
+    const entries = Object.entries(obj);
+
+    console.log(entries);
+
     // for (const property in obj) {
     //   console.log(property, obj[property]);
     // return (
@@ -57,6 +60,8 @@ const Wallet = (props: Props) => {
     //   );
     // }
   };
+
+  outputMap(outputObject);
 
   useEffect(() => {
     axios
@@ -146,7 +151,7 @@ const Wallet = (props: Props) => {
         </div>
         <div className="my-8  lg:my-14 text-white w-full">
           <p className="text-2xl mb-4">Transaction(s)</p>
-          {outputMap(outputObject)}
+          {/* {outputMap(outputObject)} */}
           <div className="w-full space-y-4"></div>
         </div>
       </div>
