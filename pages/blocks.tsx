@@ -25,7 +25,7 @@ const Blocks = (props: Props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3002/api/blocks")
+      .get("https://sympodiumcoin.herokuapp.com/api/blocks")
       .then((res) => {
         let response = res.data;
         // console.log(response.blockchain.chain);

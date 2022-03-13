@@ -12,7 +12,7 @@ const Modal = (props: Props) => {
   const onSubmitTransaction = () => {
     axios
       .post(
-        "http://localhost:3002/api/transact",
+        "https://sympodiumcoin.herokuapp.com/api/transact",
         { recipient: address, amount: amount },
         {
           headers: {
