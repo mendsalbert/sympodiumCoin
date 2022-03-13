@@ -15,17 +15,20 @@ type Props = {
 };
 
 interface TransactionPool {
-  id: string;
-  input: {};
-  outputMap: any;
+  transactionPoll: {
+    id: string;
+    input: {};
+    outputMap: {};
+  };
 }
 const Wallet = (props: Props) => {
   const [address, setAddress] = useState("");
   const [balance, setBalance] = useState("");
   const [modal, setModal] = useState(false);
-  const [transactionPool, setTransactionPool] = useState<any>();
+  const [transactionPool, setTransactionPool] = useState<TransactionPool>();
 
-  console.log(transactionPool.transactionPoll);
+  //   console.log(transactionPool.transactionPoll);
+
   const truncateString = (str, num) => {
     if (str.length <= num) {
       return str;
@@ -50,7 +53,16 @@ const Wallet = (props: Props) => {
       .then((res) => {
         let response = res.data;
         setTransactionPool(response);
-        console.log(response);
+
+        Object.values(transactionPool.transactionPoll).map(
+          (transaction: any) => {
+            Object.values(transaction.outputMap).map((output: any) => {
+              console.log(output);
+            });
+            console.log(transaction);
+          }
+        );
+        // console.log(response);
       })
       .catch((e) => {
         console.log(e);
