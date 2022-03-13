@@ -49,45 +49,51 @@ const Blocks = (props: Props) => {
           <img src="/images/cube.png" className="w-32" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  my-12 gap-4 lg:gap-8">
-          {block.map((chain, index) => (
-            <div className=" text-center space-y-3 text-white font-bold p-6 flex flex-col justify-between  relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
-              <div className="flex flex-row items-center cursor-pointer space-x-3">
-                <HashtagIcon className="h-9 text-white" />
-                <p className="text-white md:text-lg">{index + 1}</p>
-              </div>
+          {block.map((chain, index) => {
+            if (chain.data === "any") {
+              return false;
+            } else {
+              return (
+                <div className=" text-center space-y-3 text-white font-bold p-6 flex flex-col justify-between  relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
+                  <div className="flex flex-row items-center cursor-pointer space-x-3">
+                    <HashtagIcon className="h-9 text-white" />
+                    <p className="text-white md:text-lg">{index + 1}</p>
+                  </div>
 
-              <div className="flex flex-row items-center cursor-pointer space-x-3">
-                <ClockIcon className="h-9 text-white" />
-                <p className="text-white md:text-lg text-left">
-                  {dateFormat(chain.timestamp, "dd:mm:yy - h:MM:ss ")}
-                </p>
-              </div>
+                  <div className="flex flex-row items-center cursor-pointer space-x-3">
+                    <ClockIcon className="h-9 text-white" />
+                    <p className="text-white md:text-lg text-left">
+                      {dateFormat(chain.timestamp, "dd:mm:yy - h:MM:ss ")}
+                    </p>
+                  </div>
 
-              <div className="flex flex-row items-center cursor-pointer space-x-3">
-                <CubeTransparentIcon className="h-9 text-white" />
-                <p className="text-white md:text-lg">
-                  {truncateString(chain.hash, 7)}
-                </p>
-              </div>
+                  <div className="flex flex-row items-center cursor-pointer space-x-3">
+                    <CubeTransparentIcon className="h-9 text-white" />
+                    <p className="text-white md:text-lg">
+                      {truncateString(chain.hash, 7)}
+                    </p>
+                  </div>
 
-              <div className="flex flex-row items-center cursor-pointer space-x-3">
-                <CubeTransparentIcon className="h-9 text-white" />
-                <p className="text-white md:text-lg">
-                  {chain.data.map((transaction) => (
-                    <>
-                      <p>{transaction.id}</p>
-                      {Object.keys(transaction.outputMap).map((key) => (
+                  <div className="flex flex-row items-center cursor-pointer space-x-3">
+                    <CubeTransparentIcon className="h-9 text-white" />
+                    <p className="text-white md:text-lg">
+                      {chain.data.map((transaction) => (
                         <>
-                          <p>{key}</p>
-                          <p>{transaction.outputMap[key]}</p>
+                          <p>{transaction.id}</p>
+                          {Object.keys(transaction.outputMap).map((key) => (
+                            <>
+                              <p>{key}</p>
+                              <p>{transaction.outputMap[key]}</p>
+                            </>
+                          ))}
                         </>
                       ))}
-                    </>
-                  ))}
-                </p>
-              </div>
-            </div>
-          ))}
+                    </p>
+                  </div>
+                </div>
+              );
+            }
+          })}
         </div>
         <div>
           <div className="max-w-8xl mx-auto container py-10">
