@@ -27,6 +27,7 @@ const Wallet = (props: Props) => {
   const [modal, setModal] = useState(false);
   const [transactionPool, setTransactionPool] = useState<TransactionPool>();
   const [outputObject, setOutputObject] = useState({});
+  const [outputObj, setOutputObj] = useState([]);
   //   console.log(transactionPool.transactionPoll);
 
   const truncateString = (str, num) => {
@@ -37,12 +38,25 @@ const Wallet = (props: Props) => {
   };
 
   const outputMap = (obj: any) => {
-    for (const property in obj) {
-      console.log(`to: ${property}: sent: ${obj[property]}`);
-    }
-  };
+    outputObj.push[obj];
+    // for (const property in obj) {
+    //   console.log(property, obj[property]);
+    // return (
 
-  console.log(outputMap(outputObject));
+    //   <div className="w-full p-2 bg-white dark:bg-gray-600 rounded flex">
+    //     <div className="pl-3  space-y-0">
+    //       <p className="dark:text-gray-300 focus:outline-none text-md flex flex-row items-center  leading-3 pt-1 text-gray-500">
+    //         <UserIcon className="h-6 text-gray-700 dark:text-gray-400  pr-3" />
+    //         {property}
+    //       </p>
+    //       <div>
+    //         <p>{obj[property]}</p>
+    //       </div>
+    //     </div>
+    //   </div>;
+    //   );
+    // }
+  };
 
   useEffect(() => {
     axios
@@ -132,27 +146,8 @@ const Wallet = (props: Props) => {
         </div>
         <div className="my-8  lg:my-14 text-white w-full">
           <p className="text-2xl mb-4">Transaction(s)</p>
-
-          <div className="w-full space-y-4">
-            {/* {Object.values(transactionPool.).map((transaction: any) => { */}
-            <div className="w-full p-2 bg-white dark:bg-gray-600 rounded flex">
-              {/* <TicketIcon className="h-8 text-gray-700" /> */}
-              <div className="pl-3  space-y-0">
-                <p className="dark:text-gray-300 focus:outline-none text-md flex flex-row items-center  leading-3 pt-1 text-gray-500">
-                  <UserIcon className="h-6 text-gray-700 dark:text-gray-400  pr-3" />
-                  {/* {transaction.id} */}
-                </p>
-                <div>
-                  {/* {Object.values(transactionPool.transactionPoll).map(
-                    (transaction: any) => {
-                      console.log(transaction);
-                    }
-                  )} */}
-                </div>
-              </div>
-            </div>
-            {/* })} */}
-          </div>
+          {outputMap(outputObject)}
+          <div className="w-full space-y-4"></div>
         </div>
       </div>
     </Layout>
