@@ -11,7 +11,7 @@ module.exports = {
     },
     //  unused configuration commented out for now
     mumbai: {
-      url: `https://palm-testnet.infura.io/v3/${projectId}`,
+      url: "https://rpc-mumbai.maticvigil.com",
       accounts: [privateKey],
     },
     mainet: {
