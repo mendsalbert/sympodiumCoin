@@ -86,7 +86,29 @@ export default function Home() {
   if (loadingState === "loaded" && !nfts.length)
     return (
       <Layout complete={true}>
-        <h1 className="px-20 py-10 text-3xl">No items in marketplace</h1>;
+        {modal ? (
+          <AddNFTModal
+            onCloseModal={() => {
+              setModal(false);
+            }}
+          />
+        ) : (
+          ""
+        )}
+        <p className="font-bold flex flex-row space-x-2 text-center text-white text-5xl  lg:text-6xl ">
+          No items in marketplace
+        </p>
+
+        <div>
+          <div
+            onClick={() => {
+              setModal(true);
+            }}
+            className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] "
+          >
+            UPLOAD NFT
+          </div>
+        </div>
       </Layout>
     );
   return (

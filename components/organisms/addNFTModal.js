@@ -72,6 +72,7 @@ const Modal = (props) => {
     await transaction.wait();
 
     router.push("/nft");
+    props.onCloseModal();
   }
   const onSubmitTransaction = () => {
     axios
