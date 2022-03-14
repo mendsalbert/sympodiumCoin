@@ -86,6 +86,7 @@ const Wallet = (props: Props) => {
         Object.values(transactionPool.transactionPoll).map(
           (transaction: any) => {
             setOutputObject(transaction.outputMap);
+            console.log(transaction);
           }
         );
       })
