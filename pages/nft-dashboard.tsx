@@ -123,7 +123,7 @@ export default function CreatorDashboard() {
             <Link href="/nft-dashboard">
               <div
                 className={
-                  router.pathname === "/my-dashboard"
+                  router.pathname === "/nft-dashboard"
                     ? " ring-4 ring-red-500 flex-shrink-0 uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg   bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE]"
                     : "flex-shrink-0 uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg   bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE]"
                 }
