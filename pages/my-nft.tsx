@@ -8,11 +8,7 @@ import { marketplaceAddress } from "../config";
 import AddNFTModal from "../components/organisms/addNFTModal.js";
 import NFTMarketplace from "../artifacts/contracts/NFTMarket.sol/NFTMarketplace.json";
 import Layout from "../components/Layout";
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  PlusCircleIcon,
-} from "@heroicons/react/outline";
+import { PlusCircleIcon } from "@heroicons/react/outline";
 export default function MyAssets() {
   const [nfts, setNfts] = useState([]);
   const [modal, setModal] = useState(false);
@@ -101,7 +97,13 @@ export default function MyAssets() {
             </div>
 
             <Link href="/my-nft">
-              <div className="flex-shrink-0 uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg   bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] ">
+              <div
+                className={
+                  router.pathname === "/my-nft"
+                    ? " ring-4 ring-red-500 flex-shrink-0 uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg   bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE]"
+                    : "flex-shrink-0 uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg   bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE]"
+                }
+              >
                 MY ASSETS
               </div>
             </Link>

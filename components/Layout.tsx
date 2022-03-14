@@ -1,6 +1,5 @@
 import React, { ReactNode, useRef, useState, useEffect } from "react";
 import Head from "next/head";
-import { Html } from "next/document";
 import { motion } from "framer-motion";
 import { MenuAlt2Icon, MoonIcon, SunIcon, XIcon } from "@heroicons/react/solid";
 import {
@@ -134,12 +133,6 @@ const Layout = ({
                 </div>
               </div>
               <div className="flex flex-row items-center space-x-4">
-                {/* <p className="cursor-pointer text-white">
-                  <Link href="/signin">Login</Link>
-                </p>
-                <div className="cursor-pointer bg-[#5F6FFB] py-2 px-4 text-white rounded-md text-center">
-                  <Link href="/signup">Sign Up</Link>
-                </div> */}
                 <div
                   onClick={() => {
                     setTheme();

@@ -9,12 +9,13 @@ import Link from "next/link";
 import { PlusCircleIcon } from "@heroicons/react/outline";
 
 import Layout from "../components/Layout";
-
+import { useRouter } from "next/router";
 import AddNFTModal from "../components/organisms/addNFTModal.js";
 type Props = {};
 export default function CreatorDashboard() {
   const [modal, setModal] = useState(false);
   const [nfts, setNfts] = useState([]);
+  const router = useRouter();
   const [loadingState, setLoadingState] = useState("not-loaded");
   useEffect(() => {
     loadNFTs();
@@ -120,7 +121,13 @@ export default function CreatorDashboard() {
               </div>
             </Link>
             <Link href="/nft-dashboard">
-              <div className="flex-shrink-0 uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg   bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] ">
+              <div
+                className={
+                  router.pathname === "/my-dashboard"
+                    ? " ring-4 ring-red-500 flex-shrink-0 uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg   bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE]"
+                    : "flex-shrink-0 uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg   bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE]"
+                }
+              >
                 DASHBOARD
               </div>
             </Link>
