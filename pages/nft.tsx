@@ -2,6 +2,8 @@ import { ethers } from "ethers";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Web3Modal from "web3modal";
+import Link from "next/link";
+
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -95,18 +97,20 @@ export default function Home() {
         ) : (
           ""
         )}
-        <p className="font-bold flex flex-row space-x-2 text-center text-white text-5xl  lg:text-6xl ">
-          No items in marketplace
-        </p>
+        <div className="flex flex-col justify-center items-center space-y-2">
+          <p className="font-bold flex flex-row space-x-2 text-center text-white text-3xl  lg:text-4xl ">
+            No items in marketplace
+          </p>
 
-        <div>
-          <div
-            onClick={() => {
-              setModal(true);
-            }}
-            className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] "
-          >
-            UPLOAD NFT
+          <div>
+            <div
+              onClick={() => {
+                setModal(true);
+              }}
+              className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg lg:w-6/12 w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] "
+            >
+              UPLOAD NFT
+            </div>
           </div>
         </div>
       </Layout>
@@ -139,6 +143,16 @@ export default function Home() {
             >
               UPLOAD NFT
             </div>
+            <Link href="/my-nft">
+              <div className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] ">
+                MY ASSETS
+              </div>
+            </Link>
+            <Link href="/nft-dashboard">
+              <div className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] ">
+                DASHBOARD
+              </div>
+            </Link>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  my-12 gap-6 lg:gap-8">
