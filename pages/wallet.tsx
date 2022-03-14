@@ -141,7 +141,7 @@ const Wallet = (props: Props) => {
               }}
               className="uppercase cursor-pointer text-md  rounded-md w-full text-center py-2 px-5 text-white lg:text-lg  lg:w-full  bg-gradient-to-r  from-[#FF1E1E] to-[#5200FF] "
             >
-              WITHDRAW
+              MINE TRANSACTION
             </div>
           </div>
         </div>
