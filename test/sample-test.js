@@ -1,3 +1,4 @@
+/* test/sample-test.js */
 describe("NFTMarket", function () {
   it("Should create and execute market sales", async function () {
     /* deploy the marketplace */
