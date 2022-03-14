@@ -4,16 +4,8 @@ import axios from "axios";
 import Web3Modal from "web3modal";
 import Link from "next/link";
 
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  ClockIcon,
-  CreditCardIcon,
-  CubeTransparentIcon,
-  HashtagIcon,
-} from "@heroicons/react/outline";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 
-import CountUp from "react-countup";
 import Layout from "../components/Layout";
 type Props = {};
 

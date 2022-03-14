@@ -7,6 +7,7 @@ import Web3Modal from "web3modal";
 import { marketplaceAddress } from "../config";
 
 import NFTMarketplace from "../artifacts/contracts/NFTMarket.sol/NFTMarketplace.json";
+import Layout from "../components/Layout";
 
 export default function ResellNFT() {
   const [formInput, updateFormInput] = useState({ price: "", image: "" });
@@ -45,27 +46,34 @@ export default function ResellNFT() {
     });
     await transaction.wait();
 
-    router.push("/");
+    router.push("/nft");
   }
 
   return (
-    <div className="flex justify-center">
-      <div className="w-1/2 flex flex-col pb-12">
-        <input
-          placeholder="Asset Price in Eth"
-          className="mt-2 border rounded p-4"
-          onChange={(e) =>
-            updateFormInput({ ...formInput, price: e.target.value })
-          }
-        />
-        {image && <img className="rounded mt-4" width="350" src={image} />}
-        <button
-          onClick={listNFTForSale}
-          className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg"
-        >
-          List NFT
-        </button>
+    <Layout complete={true}>
+      <div className="flex justify-center">
+        <div className=" w-full lg:w-6/12 flex flex-col pb-12">
+          <input
+            type="text"
+            onChange={(e) =>
+              updateFormInput({ ...formInput, price: e.target.value })
+            }
+            className="bg-white dark:text-white focus:outline-none  rounded-xl text-lg font-medium leading-none placeholder-gray-800 text-gray-800 py-3 w-full pl-3 mt-2  bg-opacity-30 shadow-lg backdrop-filter: blur(20px)"
+            placeholder="Asset Price in Eth"
+          />
+
+          {image && <img className="rounded mt-4" width="250" src={image} />}
+
+          <div className=" flex space-x-2 my-1 flex-row items-center W-full justify-between">
+            <div
+              onClick={listNFTForSale}
+              className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg w-full  bg-gradient-to-r from-[#FF1E1E] to-[#5200FF] "
+            >
+              LIST NFT
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 }
