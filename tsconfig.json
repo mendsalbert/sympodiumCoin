@@ -19,7 +19,8 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/create-nft.js",
-    "pages/create-nft.js"
+    "pages/create-nft.js",
+    "components/organisms/addNFTModal.js"
   ],
   "exclude": ["node_modules"]
 }
