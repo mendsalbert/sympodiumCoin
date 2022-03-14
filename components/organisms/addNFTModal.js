@@ -8,8 +8,8 @@ const client = ipfsHttpClient("https://ipfs.infura.io:5001/api/v0");
 
 import { marketplaceAddress } from "../../config";
 
-import NFTMarketplace from "../../artifacts/contracts/NFTMarket.sol/NFTMarketplace.json";
-
+// import NFTMarketplace from "../../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json";
+import NFTMarketplace from "../../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json";
 const Modal = (props) => {
   const [fileUrl, setFileUrl] = useState(null);
   const [formInput, updateFormInput] = useState({

@@ -16,6 +16,7 @@ type Props = {};
 import { marketplaceAddress } from "../config";
 
 import NFTMarketplace from "../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json";
+
 import { NotificationsSharp } from "react-ionicons";
 import AddNFTModal from "../components/organisms/addNFTModal.js";
 export default function Home() {

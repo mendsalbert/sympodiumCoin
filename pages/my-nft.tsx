@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { marketplaceAddress } from "../config";
 import AddNFTModal from "../components/organisms/addNFTModal.js";
-import NFTMarketplace from "../artifacts/contracts/NFTMarket.sol/NFTMarketplace.json";
+import NFTMarketplace from "../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json";
 import Layout from "../components/Layout";
 import { PlusCircleIcon } from "@heroicons/react/outline";
 export default function MyAssets() {
