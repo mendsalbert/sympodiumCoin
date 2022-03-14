@@ -8,7 +8,11 @@ import { marketplaceAddress } from "../config";
 import AddNFTModal from "../components/organisms/addNFTModal.js";
 import NFTMarketplace from "../artifacts/contracts/NFTMarket.sol/NFTMarketplace.json";
 import Layout from "../components/Layout";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  PlusCircleIcon,
+} from "@heroicons/react/outline";
 export default function MyAssets() {
   const [nfts, setNfts] = useState([]);
   const [modal, setModal] = useState(false);
@@ -85,22 +89,24 @@ export default function MyAssets() {
             NFT
           </p>
 
-          <div>
+          <div className=" flex overflow-x-scroll  w-full scrollbar-hide space-x-4 pt-4 pb-4 pl-2 pr-3">
             <div
               onClick={() => {
                 setModal(true);
               }}
-              className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] "
+              className="flex-shrink-0 flex flex-row items-center space-x-2 uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg   bg-pink-500 "
             >
               UPLOAD NFT
+              <PlusCircleIcon className="text-white h-7" />
             </div>
+
             <Link href="/my-nft">
-              <div className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] ">
+              <div className="flex-shrink-0 uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg   bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] ">
                 MY ASSETS
               </div>
             </Link>
             <Link href="/nft-dashboard">
-              <div className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] ">
+              <div className="flex-shrink-0 uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg   bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] ">
                 DASHBOARD
               </div>
             </Link>
