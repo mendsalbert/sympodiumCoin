@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Web3Modal from "web3modal";
 import { marketplaceAddress } from "../config";
-import NFTMarketplace from "../artifacts/contracts/NFTMarket.sol/NFTMarketplace.json";
+import NFTMarketplace from "../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json";
 import Link from "next/link";
 
 import { PlusCircleIcon } from "@heroicons/react/outline";

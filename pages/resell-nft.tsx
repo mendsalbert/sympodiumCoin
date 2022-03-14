@@ -6,7 +6,7 @@ import Web3Modal from "web3modal";
 
 import { marketplaceAddress } from "../config";
 
-import NFTMarketplace from "../artifacts/contracts/NFTMarket.sol/NFTMarketplace.json";
+import NFTMarketplace from "../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json";
 import Layout from "../components/Layout";
 
 export default function ResellNFT() {
