@@ -6,6 +6,7 @@ import {
   UserIcon,
 } from "@heroicons/react/outline";
 import axios from "axios";
+import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Modal from "../components/organisms/Modal";
@@ -29,7 +30,7 @@ const Wallet = (props: Props) => {
   const [outputObject, setOutputObject] = useState({});
   const [outputObj, setOutputObj] = useState([]);
   //   console.log(transactionPool.transactionPoll);
-
+  const router = useRouter();
   const truncateString = (str, num) => {
     if (str.length <= num) {
       return str;
@@ -43,6 +44,7 @@ const Wallet = (props: Props) => {
       .then((res) => {
         let response = res.data;
         console.log(response);
+        router.push("/blocks");
       })
       .catch((e) => {
         console.log(e);
