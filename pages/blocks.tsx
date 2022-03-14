@@ -101,7 +101,7 @@ const Blocks = (props: Props) => {
             })
             .reverse()}
         </div>
-        <div>
+        {/* <div>
           <div className="max-w-8xl mx-auto container py-10">
             <ul className="flex justify-center items-center">
               <li>
@@ -137,7 +137,7 @@ const Blocks = (props: Props) => {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </Layout>
   );
