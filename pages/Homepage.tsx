@@ -38,10 +38,10 @@ const Homepage = (props: Props) => {
             Sympodium
           </p>
           <p className="text-xl">
-            WeCoin 3. World Frist Community Based Cryptocurrency.
+            We are the world's first community based Cryptocurrency
           </p>
           <div className="rounded-full text-center py-2 px-5 text-lg w-6/12 cursor-default bg-gradient-to-r from-pink-500 to-yellow-500 ">
-            <Link href="/signup">Get Started</Link>
+            <Link href="/wallet">Get Started</Link>
           </div>
         </div>
         <div className="animate-pulse text-white font-bold p-6 flex flex-col justify-between w-full lg:w-7/12 relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
@@ -127,8 +127,10 @@ const Homepage = (props: Props) => {
         </div>
 
         <p className="text-center py-5 text-white text-xl">
-          WeCoin 3. World Frist Community Based Cryptocurrency. WeCoin 3. World
-          Frist Community Based Cryptocurrency.
+          Making use of blockchain technology, we have created the first
+          community based cryptocurrency called Sympodium coin. Which exist
+          outside central authority and it is fully peer to peer. We have an NFT
+          market place called Sympodium NFT That allows user to mint NFT'S
         </p>
       </div>
     </div>
