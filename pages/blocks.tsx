@@ -100,7 +100,7 @@ const Blocks = (props: Props) => {
                                 </div>
                                 <div className="pl-3 w-full">
                                   <div className="flex items-center justify-between w-full">
-                                    <p className="focus:outline-none text-sm leading-none">
+                                    <p className="focus:outline-none text-sm leading-none  break-normal">
                                       <span className="text-indigo-200">
                                         To
                                       </span>{" "}
