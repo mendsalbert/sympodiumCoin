@@ -15,6 +15,9 @@ export default function MyAssets() {
   const [loadingState, setLoadingState] = useState("not-loaded");
   const router = useRouter();
   useEffect(() => {
+    if (typeof window.ethereum === "undefined") {
+      alert("MetaMask is not installed!");
+    }
     loadNFTs();
   }, []);
   async function loadNFTs() {
