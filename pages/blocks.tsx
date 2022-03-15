@@ -29,7 +29,11 @@ const Blocks = (props: Props) => {
 
   useEffect(() => {
     axios
-      .get(`https://sympodiumcoin.herokuapp.com/api/blocks`)
+      .get(`https://sympodiumcoin.herokuapp.com/api/blocks`, {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+      })
       .then((res) => {
         let response = res.data;
         // console.log(response.blockchain.chain);

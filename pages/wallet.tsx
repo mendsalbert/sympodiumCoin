@@ -40,7 +40,11 @@ const Wallet = (props: Props) => {
 
   const mineTransactionHandler = () => {
     axios
-      .get("https://sympodiumcoin.herokuapp.com/api/mine-transaction")
+      .get(`https://sympodiumcoin.herokuapp.com/api/mine-transaction`, {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+      })
       .then((res) => {
         let response = res.data;
         console.log(response);
@@ -67,7 +71,11 @@ const Wallet = (props: Props) => {
 
   useEffect(() => {
     axios
-      .get("https://sympodiumcoin.herokuapp.com/api/wallet-info")
+      .get(`https://sympodiumcoin.herokuapp.com/api/wallet-info`, {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+      })
       .then((res) => {
         let response = res.data;
         setAddress(response.address);
@@ -76,9 +84,12 @@ const Wallet = (props: Props) => {
       .catch((e) => {
         console.log(e);
       });
-
     axios
-      .get("https://sympodiumcoin.herokuapp.com/api/transaction-poll")
+      .get(`https://sympodiumcoin.herokuapp.com/api/transaction-poll`, {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+      })
       .then((res) => {
         let response = res.data;
         setTransactionPool(response);
