@@ -94,7 +94,7 @@ export default function Home() {
         ) : (
           ""
         )}
-        <div className="flex flex-col justify-center items-center space-y-2">
+        <div className="flex flex-col justify-center items-center space-y-2 my-20">
           <p className="font-bold flex flex-row space-x-2 text-center text-white text-3xl  lg:text-4xl ">
             No items in marketplace
           </p>
@@ -104,7 +104,7 @@ export default function Home() {
               onClick={() => {
                 setModal(true);
               }}
-              className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg lg:w-6/12 w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] "
+              className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg  lg:w-8/12 w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] "
             >
               UPLOAD NFT
             </div>

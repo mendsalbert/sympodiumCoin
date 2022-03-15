@@ -1,5 +1,6 @@
 {
   "private": true,
+  "proxy": "https://sympodium.netlify.app/",
   "scripts": {
     "dev": "next",
     "build": "next build",
