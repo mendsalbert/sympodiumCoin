@@ -1,33 +1,8 @@
-<div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="/images/logo.png" alt="Logo" width="80" height="80">
+    <img src="public/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Sympodium Coin</h3>
@@ -60,8 +35,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -73,7 +46,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img src="public/images/app.png" alt="Logo" width="" >
 
 Making use of blockchain technology, we have created the first
 community based cryptocurrency called Sympodium coin. Which exist
@@ -86,74 +59,112 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 - [Next.js](https://nextjs.org/)
 - [React.js](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Angular](https://angular.io/)
-- [Svelte](https://svelte.dev/)
-- [Laravel](https://laravel.com)
-- [Bootstrap](https://getbootstrap.com)
-- [JQuery](https://jquery.com)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+- [TailwindCSS.js](https://tailwindcss.com/)
+- [Solidity.js](https://docs.soliditylang.org/)
+- [Typescript.js](https://www.typescriptlang.org/)
+- [Express.js](https://expressjs.com/)
 
 <!-- GETTING STARTED -->
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+The project consist of the backend and also the front end.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+- nodejs installed
 
 - npm
   ```sh
   npm install npm@latest -g
   ```
 
-### Installation
+### Local setup
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+To run this project locally, follow these steps.
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = "ENTER YOUR API";
-   ```
+1. Clone the project locally, change into the directory, and install the dependencies:
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+```sh
+git clone https://github.com/mendsalbert/hyadum_coin_frontend
+
+cd hyadum_coin_frontend
+
+# install using NPM or Yarn
+npm install
+
+# or
+
+yarn
+```
+
+2. Start the local Hardhat node
+
+```sh
+npx hardhat node
+```
+
+3. With the network running, deploy the contracts to the local network in a separate terminal window
+
+```sh
+npx hardhat run scripts/deploy.js --network localhost
+```
+
+4. Start the app
+
+```
+npm run dev
+```
+
+### Configuration
+
+To deploy to Polygon test or main networks, update the configurations located in **hardhat.config.js** to use a private key and, optionally, deploy to a private RPC like Infura.
+
+```javascript
+require("@nomiclabs/hardhat-waffle");
+const fs = require("fs");
+const privateKey =
+  fs.readFileSync(".secret").toString().trim() || "01234567890123456789";
+
+// infuraId is optional if you are using Infura RPC
+const infuraId = fs.readFileSync(".infuraid").toString().trim() || "";
+
+module.exports = {
+  defaultNetwork: "hardhat",
+  networks: {
+    hardhat: {
+      chainId: 1337,
+    },
+    mumbai: {
+      // Infura
+      // url: `https://polygon-mumbai.infura.io/v3/${infuraId}`
+      url: "https://rpc-mumbai.matic.today",
+      accounts: [privateKey],
+    },
+    matic: {
+      // Infura
+      // url: `https://polygon-mainnet.infura.io/v3/${infuraId}`,
+      url: "https://rpc-mainnet.maticvigil.com",
+      accounts: [privateKey],
+    },
+  },
+  solidity: {
+    version: "0.8.4",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
+    },
+  },
+};
+```
+
+If using Infura, update **.infuraid** with your [Infura](https://infura.io/) project ID.
 
 <!-- USAGE EXAMPLES -->
 
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- ROADMAP -->
-
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-  - [ ] Chinese
-  - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -171,8 +182,6 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
