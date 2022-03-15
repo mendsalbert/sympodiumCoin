@@ -120,12 +120,12 @@ const Wallet = (props: Props) => {
         )}
 
         <div className=" mt-12 mb-5 lg:mb-0 lg:my-14 w-full lg:w-6/12 lg:flex lg:flex-col lg:self-center ">
-          <div className=" text-black font-bold  p-2 flex flex-col justify-between  relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 bg-gradient-to-r from-[#ffcc33] via-[#ffd700] to-[#e1ad21]  backdrop-filter: blur(20px)">
+          <div className=" text-black font-bold  p-6 flex flex-col justify-between  relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 bg-gradient-to-r from-[#ffcc33] via-[#ffd700] to-[#e1ad21]  backdrop-filter: blur(20px)">
             <div className="flex flex-row items-center mb-5 lg:mb-14 justify-between ">
               <img src="/images/cardlogo.png" className="w-16" />
               <p className="uppercase text-lg">Sympodium</p>
             </div>
-            <div className="flex flex-row justify-between items-center space-y-4">
+            <div className="flex flex-col  space-y-4">
               <div className="sm:w-6/12">
                 <div className="flex flex-row items-center ">
                   <p>

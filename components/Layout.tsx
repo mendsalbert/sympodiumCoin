@@ -17,11 +17,7 @@ type Props = {
   complete: boolean;
 };
 
-const Layout = ({
-  children,
-  title = "This is the default title",
-  complete,
-}: Props) => {
+const Layout = ({ children, title = "Sympodium", complete }: Props) => {
   const toggleRef = useRef(null);
   const htmlRef = useRef(null);
   const [toggle, setToggle] = useState(false);
