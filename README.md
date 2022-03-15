@@ -86,9 +86,9 @@ To run this project locally, follow these steps.
 1. Clone the project locally, change into the directory, and install the dependencies:
 
 ```sh
-git clone https://github.com/mendsalbert/hyadum_coin_frontend
+git clone https://github.com/mendsalbert/sympodiumCoin
 
-cd hyadum_coin_frontend
+cd sympodiumCoin
 
 # install using NPM or Yarn
 npm install
@@ -199,7 +199,7 @@ Brilliant Kwakye - [@a_moah\_\_](https://twitter.com/mendalbert)
 
 Daniel Sarkodie - [@AbrantepaSark](https://twitter.com/mendalbert)
 
-Project Link: [https://github.com/mendsalbert/hyadum_coin_frontend](https://github.com/mendsalbert/hyadum_coin_frontend)
+Project Link: [https://github.com/mendsalbert/sympodiumCoin](https://github.com/mendsalbert/sympodiumCoin)
 
 <!-- ACKNOWLEDGMENTS -->
 
