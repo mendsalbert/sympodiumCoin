@@ -195,9 +195,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Mends Albert - [@mendsalbert](https://twitter.com/mendalbert) - mendsalbert@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/mendsalbert/hyadum_coin_frontend](https://github.com/mendsalbert/hyadum_coin_frontend)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
