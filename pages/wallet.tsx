@@ -55,20 +55,6 @@ const Wallet = (props: Props) => {
       });
   };
 
-  const tifOptions = Object.keys(outputObject).map((key) => (
-    <div className="w-full p-2 bg-white dark:bg-gray-600 rounded flex">
-      <div className="pl-3  space-y-0">
-        <p className="dark:text-gray-300 focus:outline-none text-md flex flex-row items-center  leading-3 pt-1 text-gray-500">
-          <UserIcon className="h-6 text-gray-700 dark:text-gray-400  pr-3" />
-          {key}
-        </p>
-        <div>
-          <p>{outputObject[key]}</p>
-        </div>
-      </div>
-    </div>
-  ));
-
   useEffect(() => {
     axios
       .get(`https://sympodiumcoin.herokuapp.com/api/wallet-info`, {
@@ -93,18 +79,50 @@ const Wallet = (props: Props) => {
       .then((res) => {
         let response = res.data;
         setTransactionPool(response);
-
-        Object.values(transactionPool.transactionPoll).map(
-          (transaction: any) => {
-            setOutputObject(transaction.outputMap);
-            console.log(transaction);
-          }
-        );
+        console.log(response.transactionPoll);
+        Object.values(response.transactionPoll).map((transaction: any) => {
+          setOutputObject(transaction.outputMap);
+          console.log(transaction);
+        });
       })
       .catch((e) => {
         console.log(e);
       });
   }, []);
+
+  const tifOptions = Object.keys(outputObject).map((key) => (
+    <div className="w-full p-3 mt-4 bg-white shadow-lg flex flex-row bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
+      <div
+        aria-label="group icon"
+        role="img"
+        className="focus:outline-none  w-8 h-8 border rounded-full border-gray-200 flex flex-shrink-0 items-center justify-center"
+      >
+        <CashIcon className="h-6 text-green " />
+      </div>
+      <div className="pl-3 w-full">
+        <div className="flex items-center justify-between w-full">
+          <p className="focus:outline-none text-sm leading-none">
+            <span className="text-indigo-200">To</span>{" "}
+            {truncateString(key, 20)}
+          </p>
+        </div>
+        <p className="focus:outline-none text-xs leading-3 pt-1 text-white-500">
+          <span className="text-indigo-200">Amount</span> {outputObject[key]}
+        </p>
+      </div>
+    </div>
+    // <div className="w-full p-2 bg-white dark:bg-gray-600 rounded flex">
+    //   <div className="pl-3  space-y-0">
+    //     <p className="dark:text-gray-300 focus:outline-none text-md flex flex-row items-center  leading-3 pt-1 text-gray-500">
+    //       <UserIcon className="h-6 text-gray-700 dark:text-gray-400  pr-3" />
+    //       {key}
+    //     </p>
+    //     <div>
+    //       <p>{outputObject[key]}</p>
+    //     </div>
+    //   </div>
+    // </div>
+  ));
 
   return (
     <Layout complete={true}>

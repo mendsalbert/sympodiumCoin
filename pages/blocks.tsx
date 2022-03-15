@@ -63,7 +63,7 @@ const Blocks = (props: Props) => {
                 return false;
               } else {
                 return (
-                  <div className=" text-center space-y-3 text-white font-bold p-6 flex flex-col justify-between  relative bg-white shadow-lg  bg-clip-padding bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
+                  <div className=" text-center space-y-3 text-white font-bold p-6 flex flex-col justify-between  relative  bg-clip-padding  bg-white shadow-lg  bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
                     <div className="flex flex-row items-center cursor-pointer space-x-3">
                       <HashtagIcon className="h-9 text-white" />
                       <p className="text-white md:text-lg">{index + 1}</p>
