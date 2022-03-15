@@ -187,9 +187,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+Distributed under the MIT License.
 
 <!-- CONTACT -->
 
@@ -197,9 +195,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Mends Albert - [@mendsalbert](https://twitter.com/mendalbert) - mendsalbert@gmail.com
 
-Project Link: [https://github.com/mendsalbert/hyadum_coin_frontend](https://github.com/mendsalbert/hyadum_coin_frontend)
+Brilliant Kwakye - [@a_moah\_\_](https://twitter.com/mendalbert)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+Daniel Sarkodie - [@AbrantepaSark](https://twitter.com/mendalbert)
+
+Project Link: [https://github.com/mendsalbert/hyadum_coin_frontend](https://github.com/mendsalbert/hyadum_coin_frontend)
 
 <!-- ACKNOWLEDGMENTS -->
 
@@ -215,8 +215,6 @@ Use this space to list resources you find helpful and would like to give credit 
 - [GitHub Pages](https://pages.github.com)
 - [Font Awesome](https://fontawesome.com)
 - [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
