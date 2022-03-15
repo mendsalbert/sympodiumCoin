@@ -1,16 +1,35 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import CountUp from "react-countup";
 import { Waypoint } from "react-waypoint";
 import Link from "next/link";
+import axios from "axios";
 type Props = {};
 
 const Homepage = (props: Props) => {
   const listInnerRef = useRef();
+  const [block, setBlock] = useState([]);
+
   const [viewPortEntered, setViewPortEntered] = useState(false);
   const onVWEnter = () => {
     setViewPortEntered(true);
   };
 
+  useEffect(() => {
+    axios
+      .get(`https://sympodiumcoin.herokuapp.com/api/blocks`, {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+      })
+      .then((res) => {
+        let response = res.data;
+        // console.log(response.blockchain.chain);
+        setBlock(response.blockchain.chain);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
   return (
     <div>
       <div className="flex flex-col space-y-10 lg:space-y-0 lg:flex lg:flex-row justify-between space-x-0 lg:space-x-16 items-start my-20 w-full">
@@ -54,7 +73,7 @@ const Homepage = (props: Props) => {
             <div className="text-center  mb-7 justify-between ">
               <p className="uppercase text-5xl font-bold py-4 ">
                 {viewPortEntered ? (
-                  <CountUp delay={1} end={300} />
+                  <CountUp delay={1} end={block.length - 1} />
                 ) : (
                   <CountUp delay={1} end={0} />
                 )}
@@ -70,7 +89,7 @@ const Homepage = (props: Props) => {
             <div className="text-center  mb-7 justify-between ">
               <p className="uppercase text-5xl font-bold py-4">
                 {viewPortEntered ? (
-                  <CountUp delay={1} end={150} />
+                  <CountUp delay={1} end={block.length} />
                 ) : (
                   <CountUp delay={1} end={0} />
                 )}
@@ -86,7 +105,7 @@ const Homepage = (props: Props) => {
             <div className="text-center  mb-7 justify-between ">
               <p className="uppercase text-5xl font-bold py-4">
                 {viewPortEntered ? (
-                  <CountUp delay={1} end={120} />
+                  <CountUp delay={1} end={1} />
                 ) : (
                   <CountUp delay={1} end={0} />
                 )}
@@ -94,7 +113,7 @@ const Homepage = (props: Props) => {
               </p>
             </div>
             <div className="space-y-0">
-              <p className="text-xl">WALLETS</p>
+              <p className="text-xl">WALLETS CREATED</p>
             </div>
           </div>
         </div>

@@ -39,7 +39,7 @@ const Modal = (props: Props) => {
       >
         <div
           role="alert"
-          className="container mx-auto w-11/12 md:w-2/3 max-w-lg mt-28"
+          className="container mx-auto w-11/12 md:w-2/3 max-w-lg "
         >
           <div className="relative py-8 px-5 md:px-10 dark:border-none bg-white shadow-md rounded border  border-gray-400">
             <div className="w-full flex justify-start text-gray-600 mb-3">
