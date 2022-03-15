@@ -59,16 +59,16 @@ export default function MyAssets() {
     console.log("nft:", nft);
     router.push(`/resell-nft?id=${nft.tokenId}&tokenURI=${nft.tokenURI}`);
   }
-  if (loadingState === "loaded" && !nfts.length)
-    return (
-      <Layout complete={true}>
-        <div className="flex flex-col justify-center items-center space-y-2">
-          <p className="font-bold flex flex-row space-x-2 text-center text-white text-3xl  lg:text-4xl ">
-            No NFT's own
-          </p>
-        </div>
-      </Layout>
-    );
+  // if (loadingState === "loaded" && !nfts.length)
+  //   return (
+  //     <Layout complete={true}>
+  //       <div className="flex flex-col justify-center items-center space-y-2">
+  //         <p className="font-bold flex flex-row space-x-2 text-center text-white text-3xl  lg:text-4xl ">
+  //           No NFT's own
+  //         </p>
+  //       </div>
+  //     </Layout>
+  //   );
   return (
     <Layout complete={true}>
       <div className="my-16">
@@ -85,7 +85,9 @@ export default function MyAssets() {
         <div className="flex flex-col lg:flex-col items-center justify-center space-x-4">
           <img src="/images/nft.png" className="w-24" />
           <p className="font-extrabold flex flex-row space-x-2 text-center text-white text-5xl  lg:text-6xl ">
-            NFT
+            {loadingState === "loaded" && !nfts.length
+              ? `No NFT's own`
+              : `NFT Marketplace`}
           </p>
 
           <div className=" flex overflow-x-scroll  w-full scrollbar-hide space-x-4 pt-4 pb-4 pl-2 pr-3">

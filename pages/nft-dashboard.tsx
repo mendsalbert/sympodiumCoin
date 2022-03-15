@@ -18,6 +18,9 @@ export default function CreatorDashboard() {
   const router = useRouter();
   const [loadingState, setLoadingState] = useState("not-loaded");
   useEffect(() => {
+    if (typeof window.ethereum === "undefined") {
+      alert("MetaMask is not installed!");
+    }
     loadNFTs();
   }, []);
   async function loadNFTs() {
@@ -55,36 +58,36 @@ export default function CreatorDashboard() {
     setNfts(items);
     setLoadingState("loaded");
   }
-  if (loadingState === "loaded" && !nfts.length)
-    return (
-      <Layout complete={true}>
-        {modal ? (
-          <AddNFTModal
-            onCloseModal={() => {
-              setModal(false);
-            }}
-          />
-        ) : (
-          ""
-        )}
-        <div className="flex flex-col justify-center items-center space-y-2">
-          <p className="font-bold flex flex-row space-x-2 text-center text-white text-3xl  lg:text-4xl ">
-            No NFTs listed
-          </p>
+  // if (loadingState === "loaded" && !nfts.length)
+  //   return (
+  //     <Layout complete={true}>
+  //       {modal ? (
+  //         <AddNFTModal
+  //           onCloseModal={() => {
+  //             setModal(false);
+  //           }}
+  //         />
+  //       ) : (
+  //         ""
+  //       )}
+  //       <div className="flex flex-col justify-center items-center space-y-2">
+  //         <p className="font-bold flex flex-row space-x-2 text-center text-white text-3xl  lg:text-4xl ">
+  //           No NFTs listed
+  //         </p>
 
-          <div>
-            <div
-              onClick={() => {
-                setModal(true);
-              }}
-              className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg lg:w-6/12 w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] "
-            >
-              UPLOAD NFT
-            </div>
-          </div>
-        </div>
-      </Layout>
-    );
+  //         <div>
+  //           <div
+  //             onClick={() => {
+  //               setModal(true);
+  //             }}
+  //             className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg lg:w-6/12 w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] "
+  //           >
+  //             UPLOAD NFT
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </Layout>
+  //   );
   return (
     <Layout complete={true}>
       <div className="my-16">
@@ -101,7 +104,9 @@ export default function CreatorDashboard() {
         <div className="flex flex-col lg:flex-col items-center justify-center space-x-4">
           <img src="/images/nft.png" className="w-24" />
           <p className="font-extrabold flex flex-row space-x-2 text-center text-white text-5xl  lg:text-6xl ">
-            NFT listed
+            {loadingState === "loaded" && !nfts.length
+              ? `No NFTs listed`
+              : `NFT Listed`}
           </p>
 
           <div className=" flex overflow-x-scroll  w-full scrollbar-hide space-x-4 pt-4 pb-4 pl-2 pr-3">
