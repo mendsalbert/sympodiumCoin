@@ -1,4 +1,5 @@
 import {
+  CashIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
   ClockIcon,
@@ -83,16 +84,36 @@ const Blocks = (props: Props) => {
                       </p>
                     </div>
 
-                    <div className="flex flex-row items-center cursor-pointer space-x-3">
-                      <CreditCardIcon className="h-9 text-white" />
+                    <div className="flex flex-row text-left cursor-pointer space-x-3">
+                      {/* <CreditCardIcon className="h-9 text-white" /> */}
                       <p className="text-white md:text-lg">
                         {chain.data.map((transaction) => (
-                          <div className="">
+                          <div className="w-full">
                             {Object.keys(transaction.outputMap).map((key) => (
-                              <div className="flex flex-row space-x-3">
-                                <p>To: {truncateString(key, 8)}</p>
-
-                                <p>Sent: {transaction.outputMap[key]}</p>
+                              <div className="w-full p-3 mt-4 bg-white shadow-lg flex flex-row bg-opacity-30 rounded-xl border border-gray-200 backdrop-filter: blur(20px)">
+                                <div
+                                  aria-label="group icon"
+                                  role="img"
+                                  className="focus:outline-none  w-8 h-8 border rounded-full border-gray-200 flex flex-shrink-0 items-center justify-center"
+                                >
+                                  <CashIcon className="h-6 text-green " />
+                                </div>
+                                <div className="pl-3 w-full">
+                                  <div className="flex items-center justify-between w-full">
+                                    <p className="focus:outline-none text-sm leading-none">
+                                      <span className="text-indigo-200">
+                                        To
+                                      </span>{" "}
+                                      {truncateString(key, 15)}
+                                    </p>
+                                  </div>
+                                  <p className="focus:outline-none text-xs leading-3 pt-1 text-white-500">
+                                    <span className="text-indigo-200">
+                                      Amount
+                                    </span>{" "}
+                                    {transaction.outputMap[key]}
+                                  </p>
+                                </div>
                               </div>
                             ))}
                           </div>

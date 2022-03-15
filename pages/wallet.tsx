@@ -111,17 +111,6 @@ const Wallet = (props: Props) => {
         </p>
       </div>
     </div>
-    // <div className="w-full p-2 bg-white dark:bg-gray-600 rounded flex">
-    //   <div className="pl-3  space-y-0">
-    //     <p className="dark:text-gray-300 focus:outline-none text-md flex flex-row items-center  leading-3 pt-1 text-gray-500">
-    //       <UserIcon className="h-6 text-gray-700 dark:text-gray-400  pr-3" />
-    //       {key}
-    //     </p>
-    //     <div>
-    //       <p>{outputObject[key]}</p>
-    //     </div>
-    //   </div>
-    // </div>
   ));
 
   return (
