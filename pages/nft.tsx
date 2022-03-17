@@ -66,7 +66,10 @@ export default function Home() {
     /* needs the user to sign the transaction, so will use Web3Provider and sign it */
     const web3Modal = new Web3Modal();
     const connection = await web3Modal.connect();
-    const provider = new ethers.providers.Web3Provider(connection);
+    // const provider = new ethers.providers.Web3Provider(connection);
+    const provider = new ethers.providers.JsonRpcProvider(
+      "https://rpc-mumbai.maticvigil.com"
+    );
     const signer = provider.getSigner();
     const contract = new ethers.Contract(
       marketplaceAddress,
