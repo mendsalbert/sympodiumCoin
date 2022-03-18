@@ -1,9 +1,9 @@
-import { ethers } from "ethers";
+import { ethers, providers } from "ethers";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Web3Modal from "web3modal";
 import Link from "next/link";
-
+import Web3 from "web3";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -17,20 +17,26 @@ import { marketplaceAddress } from "../config";
 
 import NFTMarketplace from "../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json";
 
-import { NotificationsSharp } from "react-ionicons";
 import AddNFTModal from "../components/organisms/addNFTModal.js";
+
 export default function Home() {
   const [modal, setModal] = useState(false);
   const [nfts, setNfts] = useState([]);
   const [loadingState, setLoadingState] = useState("not-loaded");
+
   useEffect(() => {
     loadNFTs();
   }, []);
+
   async function loadNFTs() {
     /* create a generic provider and query for unsold market items */
     const provider = new ethers.providers.JsonRpcProvider(
-      "https://rpc-mumbai.maticvigil.com"
+      "https://rpc-mumbai.maticvigil.com/"
     );
+    // "https://rpc-mumbai.maticvigil.com/"
+    // ("https://rpc-mumbai.matic.today");
+
+    // setProvider(provider);
     const contract = new ethers.Contract(
       marketplaceAddress,
       NFTMarketplace.abi,
@@ -63,58 +69,46 @@ export default function Home() {
     setLoadingState("loaded");
   }
   async function buyNft(nft) {
+    console.log(nft.tokenId);
     /* needs the user to sign the transaction, so will use Web3Provider and sign it */
-    const web3Modal = new Web3Modal();
-    const connection = await web3Modal.connect();
+
+    // const web3Modal = new Web3Modal();
+    // const connection = await web3Modal.connect();
     // const provider = new ethers.providers.Web3Provider(connection);
-    const provider = new ethers.providers.JsonRpcProvider(
-      "https://rpc-mumbai.maticvigil.com"
-    );
-    const signer = provider.getSigner();
+
+    const web3Modal = new Web3Modal({
+      cacheProvider: true,
+      providerOptions: {},
+    });
+
+    const web3Provider = await web3Modal.connect();
+    const ethersProvider = new ethers.providers.Web3Provider(web3Provider);
+    // const ethersSigner = ethersProvider.getSigner()
+
+    const signer = ethersProvider.getSigner();
+    // console.log();
     const contract = new ethers.Contract(
       marketplaceAddress,
       NFTMarketplace.abi,
       signer
     );
+    console.log(contract);
 
     /* user will be prompted to pay the asking proces to complete the transaction */
     const price = ethers.utils.parseUnits(nft.price.toString(), "ether");
-    const transaction = await contract.createMarketSale(nft.tokenId, {
+    // const price = window.web3.utils.toWei(nft.price.toString(), "Ether");
+    // const price = ethers.utils.formatUnits(nft.price, "Ether");
+    // const gweiValue = ethers.utils.formatUnits(weiValue, "gwei");
+
+    let transaction = await contract.createMarketSale(nft.tokenId, {
       value: price,
     });
+
+    // const transaction = await contract.createMarketSale(nft.tokenId);
     await transaction.wait();
     loadNFTs();
   }
-  // if (loadingState === "loaded" && !nfts.length)
-  //   return (
-  //     <Layout complete={true}>
-  //       {modal ? (
-  //         <AddNFTModal
-  //           onCloseModal={() => {
-  //             setModal(false);
-  //           }}
-  //         />
-  //       ) : (
-  //         ""
-  //       )}
-  //       <div className="flex flex-col justify-center items-center space-y-2 my-20">
-  //         <p className="font-bold flex flex-row space-x-2 text-center text-white text-3xl  lg:text-4xl ">
-  //           No items in marketplace
-  //         </p>
 
-  //         <div>
-  //           <div
-  //             onClick={() => {
-  //               setModal(true);
-  //             }}
-  //             className="uppercase cursor-pointer  rounded-full text-center py-2 px-4 text-white text-lg  lg:w-8/12 w-full  bg-gradient-to-r from-[#0A7ABF] to-[#00DBDE] "
-  //           >
-  //             UPLOAD NFT
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </Layout>
-  //   );
   return (
     <Layout complete={true}>
       <div className="my-16">

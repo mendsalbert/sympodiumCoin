@@ -1,3 +1,3 @@
-
-  export const marketplaceAddress = "0x999d359c3AEdCFFDe88E19A452516a94DaB0A65D"
-  
+export const marketplaceAddress = "0x8c1260E38449F9a3B55293f43020050D8aB3a69B";
+// export const nftplaceAddress = "0xfd3570132Fd267827D5F7339E210eE978aF59C29";
+//0x114fB1B21f87716DF7491A74cfd399ED6D7eeffE
