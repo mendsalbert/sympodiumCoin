@@ -84,7 +84,7 @@ export default function MyAssets() {
 
         <div className="flex flex-col lg:flex-col items-center justify-center space-x-4">
           <img src="/images/nft.png" className="w-24" />
-          <p className="font-extrabold flex flex-row space-x-2 text-center text-white text-5xl  lg:text-6xl ">
+          <p className="font-extrabold flex flex-row space-x-2 text-center text-white text-4xl  lg:text-6xl ">
             {loadingState === "loaded" && !nfts.length
               ? `No NFT's own`
               : `NFT Marketplace`}
