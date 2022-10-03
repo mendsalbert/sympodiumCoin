@@ -36,10 +36,11 @@ export default function Home() {
     // "https://rpc-mumbai.maticvigil.com/"
     // ("https://rpc-mumbai.matic.today");
 
+    
     // setProvider(provider);
     const contract = new ethers.Contract(
       marketplaceAddress,
-      NFTMarketplace.abi,
+      NFTMarketplace.abi, 
       provider
     );
     const data = await contract.fetchMarketItems();
